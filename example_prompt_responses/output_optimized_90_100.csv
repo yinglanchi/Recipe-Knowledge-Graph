@@ -1,0 +1,740 @@
+"Recipe Name: Basic Challah Dough. Ingredients: 1/2 cup plus 2 tablespoons warm water (105F to 115F), 1 envelope dry yeast ( 1/4 ounce or 2 1/2 teaspoons); see Note, 1 tablespoon plus 1 1/2 teaspoons sugar, About 2 3/4 to 3 cups unbleached all-purpose flour, 1/4 cup plus 2 tablespoons vegetable oil, 2 large eggs, 1 1/2 teaspoons salt, Instructions: Prepared By Hand: Challah dough is fun and easy to mix and knead by hand. As with all yeast doughs, the amount of flour needed to absorb the liquid varies with the humidity, the flours dryness, and the size of the eggs. But remember that bread dough is forgiving and works well in a wide range of flour to liquid ratios. Do try to keep the dough soft. Although firm dough is easier to braid, soft dough gives the lightest, most delicious bread. Use this recipe or follow this method for any challah recipe. Pour 1/4 cup of the water into a small bowl. Sprinkle yeast over the water and 1 teaspoon sugar over yeast. Let yeast mixture stand about 10 minutes or until foamy. Stir if not smooth. Oil a large bowl. Sift 2 3/4 cups of the flour into a large bowl. Make large, deep well in center of flour. Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well. Mix ingredients in well with a wooden spoon until blended. Mix in flour, first with a spoon, then by hand, until ingredients come together to form a dough. Dough should be soft and sticky. Knead dough vigorously on work surface until it is very smooth and elastic, about 7 minutes; during kneading, if it sticks to your fingers, add more flour 1 tablespoon at a time, until dough is no longer very sticky. Put dough into oiled bowl and turn dough over to oil all surfaces. Cover with warm, slightly damp towel or plastic wrap and let rise in warm draft-free area about 1 hour 15 minutes or until doubled. Remove dough with rubber spatula to work surface. Knead dough lightly again about 30 seconds to knock out air. Clean bowl if necessary. Return dough to bowl, cover, and let rise again until doubled, about 1 hour. Shape and bake dough as desired (see recipes). Prepared By Mixer: Use a heavy-duty mixer with a dough hook for this recipe. It is the best and most efficient way to mix and knead large amounts of dough and to prepare doughs that are very sticky. Pour 1/4 cup of the water into a small bowl. Sprinkle yeast into water, then sprinkle 1 teaspoon sugar into yeast water. Let stand about 10 minutes or until foamy. Oil a large bowl. Sift 2 3/4 cups flour into bowl of mixer fitted with dough hook. Make large, deep well in center of flour. Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well. Mix at medium-low speed, pushing flour in often at first and scraping dough down occasionally from bowl and from hook, until ingredients come together in a soft, sticky dough. Add remaining flour and beat until blended in. Mix dough at medium speed to knead it, scraping down twice, about 5 minutes or until dough is smooth and almost cleans sides of bowl. Pinch dough quickly; if it sticks to your fingers, beat in more flour 1 tablespoon at a time until dough is no longer very sticky. If you add flour, mix at medium speed about 2 minutes. Dough should be soft, smooth, and elastic. Put dough into oiled bowl and turn dough over to oil all surfaces. Cover with warm, slightly damp towel or plastic wrap. Let rise in warm draft-free area about 1 1/4 hours or until nearly doubled. Knead dough lightly in bowl to knock out air. Cover and let rise again about 1 hour or until nearly doubled. Shape and bake dough as desired (see recipes). Prepared by Food Processor: I love making challah dough in the food processor because it is so quick and easy and produces very good results. In fact, the dough is mixed and kneaded in less than three minutes! Naturally, the amount you can make is limited by the size of your food processor. I use a medium-size (10- to 12-cup capacity) food processor to mix this dough, which is enough for 1 medium loaf. If you are in a hurry, you can skip the doughs second rising; the loaf wont be quite as light but it will still taste good. Pour 1/4 cup of the water into small bowl. Sprinkle yeast over water. Sprinkle 1 teaspoon of sugar over yeast. Let stand about 10 minutes or until foamy. Stir if not smooth. Oil a large bowl. Fit food processor with dough blade. Combine 2 3/4 cups flour and remaining sugar in food processor. Process briefly to mix. Add yeast mixture, oil, eggs, and salt. With blades of processor turning, pour in remaining water. Process until ingredients come together to form a soft dough; it will not form a ball. Process for about 30 seconds to knead dough. Pinch dough quickly; if it sticks to your fingers, add more flour 1 tablespoon at a time, until dough is no longer very sticky. Knead again by processing about 30 seconds or until smooth. Remove dough from processor and shape it into a rough ball in your hands. Put dough into oiled bowl and turn dough over to oil all surfaces. Cover with warm, slightly damp towel or plastic wrap and let rise in warm draft-free area about 1 hour 15 minutes or until doubled. Remove dough with rubber spatula to work surface. Knead dough lightly again about 30 seconds to knock out air. Clean bowl if necessary. Return dough to bowl, cover, and let rise again until doubled, about 1 hour. Shape and bake dough as desired (see recipes). Hand-Kneading Bread Dough: You can knead bread dough in a mixer with a dough hook or in a food processor. If you are making the dough by hand, there are two basic techniques for kneading it: the slapping method, used for soft doughs; and the conventional bread dough method, pushing with your palms. Since challah dough is quite soft when I knead it by hand, I prefer the slapping method, which I learned in France. With this method, you end up adding less flour and the dough stays softer, resulting in a bread that is more moist. If you are used to the conventional method or feel more comfortable with it, however, you can use it. Bagel dough is firmer than challah dough and works equally well by either method. Slapping Method of Kneading: With the dough on the work surface, place your hands next to each other on top of the dough, holding it lightly in your fingertips. Pull up the dough and slap it vigorously onto the work surface. Grasp the dough again at a different place, and repeat. Continue slapping dough, lightly flouring the surface if necessary to prevent excessive sticking, until the dough is smooth and elastic and holds together in one piece. Its all right if the dough is still slightly sticky but it should be much less sticky than it was before kneading. Be sure to handle the dough lightly and quickly so it does not stick much to your fingers. Conventional Method of Kneading: Put the dough on the work surface. Push the dough away from you against the work surface with the palm of your hand. Turn the dough, fold its top third down toward you, and push it again. Continue kneading the dough, flouring the work surface as necessary to prevent excessive sticking, until the dough is smooth and elastic.","```cypher
+CREATE (:Ingredient {name: ""warm water"", measure: ""1/2 cup plus 2 tablespoons"", temperature: ""105F to 115F""})
+CREATE (:Ingredient {name: ""dry yeast"", measure: ""1 envelope (1/4 ounce or 2 1/2 teaspoons)""})
+CREATE (:Ingredient {name: ""sugar"", measure: ""1 tablespoon plus 1 1/2 teaspoons""})
+CREATE (:Ingredient {name: ""unbleached all-purpose flour"", measure: ""About 2 3/4 to 3 cups""})
+CREATE (:Ingredient {name: ""vegetable oil"", measure: ""1/4 cup plus 2 tablespoons""})
+CREATE (:Ingredient {name: ""eggs"", measure: ""2 large""})
+CREATE (:Ingredient {name: ""salt"", measure: ""1 1/2 teaspoons""})
+``````cypher
+CREATE (:Tool {name: ""wooden spoon""});
+CREATE (:Tool {name: ""rubber spatula""});
+CREATE (:Tool {name: ""work surface""});
+CREATE (:Tool {name: ""mixer""});
+CREATE (:Tool {name: ""food processor""});
+CREATE (:Tool {name: ""dough hook""});
+```
+CREATE (:Process {name: ""mixing dough"", referenceText: ""Challah dough is fun and easy to mix and knead by hand.""})
+CREATE (:Process {name: ""kneading dough"", referenceText: ""Challah dough is fun and easy to mix and knead by hand.""})
+CREATE (:Process {name: ""adjusting flour amount"", referenceText: ""As with all yeast doughs, the amount of flour needed to absorb the liquid varies with the humidity, the flours dryness, and the size of the eggs.""})
+CREATE (:Process {name: ""keeping dough soft"", referenceText: ""Do try to keep the dough soft.""})
+CREATE (:Process {name: ""braiding dough"", referenceText: ""Although firm dough is easier to braid, soft dough gives the lightest, most delicious bread.""})
+CREATE (p1:Process {name: ""Pour water into a small bowl"", referenceText: ""Pour 1/4 cup of the water into a small bowl.""})
+CREATE (p2:Process {name: ""Sprinkle yeast over the water"", referenceText: ""Sprinkle yeast over the water and 1 teaspoon sugar over yeast.""})
+CREATE (p3:Process {name: ""Sprinkle sugar over yeast"", referenceText: ""Sprinkle yeast over the water and 1 teaspoon sugar over yeast.""})
+CREATE (p4:Process {name: ""Let yeast mixture stand about 10 minutes or until foamy"", referenceText: ""Let yeast mixture stand about 10 minutes or until foamy.""})
+CREATE (p5:Process {name: ""Stir if not smooth"", referenceText: ""Stir if not smooth.""})
+CREATE (p1:Process {name: ""Oil a large bowl"", referenceText: ""Oil a large bowl. ""})
+CREATE (p2:Process {name: ""Sift 2 3/4 cups of the flour into a large bowl"", referenceText: ""Sift 2 3/4 cups of the flour into a large bowl. ""})
+CREATE (p3:Process {name: ""Make large, deep well in center of flour"", referenceText: ""Make large, deep well in center of flour. ""})
+CREATE (p4:Process {name: ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well"", referenceText: ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well. ""})
+CREATE (p5:Process {name: ""Mix ingredients in well with a wooden spoon until blended"", referenceText: ""Mix ingredients in well with a wooden spoon until blended. ""})
+CREATE (mix_in_flour:Process {name: ""Mix in flour"", referenceText: ""Mix in flour, first with a spoon, then by hand, until ingredients come together to form a dough.""})
+
+CREATE (knead_dough:Process {name: ""Knead dough"", referenceText: ""Knead dough vigorously on work surface until it is very smooth and elastic, about 7 minutes; during kneading, if it sticks to your fingers, add more flour 1 tablespoon at a time, until dough is no longer very sticky.""})
+
+CREATE (put_dough_into_bowl:Process {name: ""Put dough into oiled bowl"", referenceText: ""Put dough into oiled bowl and turn dough over to oil all surfaces.""})
+
+CREATE (cover_dough:Process {name: ""Cover dough"", referenceText: ""Cover with warm, slightly damp towel or plastic wrap and let rise in warm draft-free area about 1 hour 15 minutes or until doubled.""})
+                 CREATE (removeDough:Process {name: ""Remove dough""})
+                 SET removeDough.referenceText = ""Remove dough with rubber spatula to work surface.""
+
+                 CREATE (kneadDough:Process {name: ""Knead dough""})
+                 SET kneadDough.referenceText = ""Knead dough lightly again about 30 seconds to knock out air.""
+
+                 CREATE (cleanBowl:Process {name: ""Clean bowl""})
+                 SET cleanBowl.referenceText = ""Clean bowl if necessary.""
+
+                 CREATE (returnDoughToBowl:Process {name: ""Return dough to bowl""})
+                 SET returnDoughToBowl.referenceText = ""Return dough to bowl, cover, and let rise again until doubled, about 1 hour.""
+
+                 CREATE (shapeAndBakeDough:Process {name: ""Shape and bake dough""})
+                 SET shapeAndBakeDough.referenceText = ""Shape and bake dough as desired (see recipes).""
+                CREATE (mixer:Process {name: ""Use a heavy-duty mixer with a dough hook"", referenceText: ""Use a heavy-duty mixer with a dough hook for this recipe.""})
+                CREATE (pourWater:Process {name: ""Pour water into a small bowl"", referenceText: ""Pour 1/4 cup of the water into a small bowl.""})
+                CREATE (sprinkleYeast:Process {name: ""Sprinkle yeast into water"", referenceText: ""Sprinkle yeast into water.""})
+                CREATE (sprinkleSugar:Process {name: ""Sprinkle sugar into yeast water"", referenceText: ""Sprinkle 1 teaspoon sugar into yeast water.""})
+                CREATE (letStand:Process {name: ""Let stand until foamy"", referenceText: ""Let stand about 10 minutes or until foamy.""})
+                
+                 CREATE (p1:Process {name: ""Oil a large bowl"", referenceText: ""Oil a large bowl""})
+                 CREATE (p2:Process {name: ""Sift 2 3/4 cups flour into bowl of mixer fitted with dough hook"", referenceText: ""Sift 2 3/4 cups flour into bowl of mixer fitted with dough hook""})
+                 CREATE (p3:Process {name: ""Make large, deep well in center of flour"", referenceText: ""Make large, deep well in center of flour""})
+                 CREATE (p4:Process {name: ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well"", referenceText: ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well""})
+                 CREATE (p5:Process {name: ""Mix at medium-low speed, pushing flour in often at first and scraping dough down occasionally from bowl and from hook, until ingredients come together in a soft, sticky dough"", referenceText: ""Mix at medium-low speed, pushing flour in often at first and scraping dough down occasionally from bowl and from hook, until ingredients come together in a soft, sticky dough""})
+CREATE (p1:Process {name: ""Add remaining flour"", referenceText: ""Add remaining flour and beat until blended in.""})
+CREATE (p2:Process {name: ""Mix dough at medium speed"", referenceText: ""Mix dough at medium speed to knead it, scraping down twice, about 5 minutes or until dough is smooth and almost cleans sides of bowl.""})
+CREATE (p3:Process {name: ""Pinch dough quickly"", referenceText: ""Pinch dough quickly; if it sticks to your fingers, beat in more flour 1 tablespoon at a time until dough is no longer very sticky.""})
+CREATE (p4:Process {name: ""Mix at medium speed"", referenceText: ""If you add flour, mix at medium speed about 2 minutes.""})
+CREATE (p5:Process {name: ""Dough should be soft, smooth, and elastic"", referenceText: ""Dough should be soft, smooth, and elastic.""})
+CREATE (:Process {name: ""Put dough into oiled bowl"", referenceText: ""Put dough into oiled bowl and turn dough over to oil all surfaces""})
+CREATE (:Process {name: ""Cover with warm, slightly damp towel or plastic wrap"", referenceText: ""Cover with warm, slightly damp towel or plastic wrap""})
+CREATE (:Process {name: ""Let rise in warm draft-free area about 1 1/4 hours or until nearly doubled"", referenceText: ""Let rise in warm draft-free area about 1 1/4 hours or until nearly doubled""})
+CREATE (:Process {name: ""Knead dough lightly in bowl to knock out air"", referenceText: ""Knead dough lightly in bowl to knock out air""})
+CREATE (:Process {name: ""Cover and let rise again about 1 hour or until nearly doubled"", referenceText: ""Cover and let rise again about 1 hour or until nearly doubled""})
+                    CREATE (ShapeAndBakeDough:Process {name: ""Shape and bake dough""})
+                    SET ShapeAndBakeDough.referenceText = ""Shape and bake dough as desired (see recipes)""
+                    CREATE (MixAndKneadDough:Process {name: ""Mix and knead dough""})
+                    SET MixAndKneadDough.referenceText = ""In fact, the dough is mixed and kneaded in less than three minutes!""
+                    CREATE (LimitAmount:Process {name: ""Limit amount based on food processor size""})
+                    SET LimitAmount.referenceText = ""Naturally, the amount you can make is limited by the size of your food processor""
+                    CREATE (PrepareDough:Process {name: ""Prepare dough""})
+                    SET PrepareDough.referenceText = ""I use a medium-size (10- to 12-cup capacity) food processor to mix this dough, which is enough for 1 medium loaf.""
+                    CREATE (UseFoodProcessor:Process {name: ""Use food processor""})
+                    SET UseFoodProcessor.referenceText = ""Prepared by Food Processor: I love making challah dough in the food processor because it is so quick and easy and produces very good results.""
+                    
+CREATE (p1:Process {name: ""Skip the dough's second rising""}) SET p1.referenceText = ""If you are in a hurry, you can skip the doughs second rising; the loaf wont be quite as light but it will still taste good.""
+CREATE (p2:Process {name: ""Pour water into small bowl""}) SET p2.referenceText = ""Pour 1/4 cup of the water into small bowl.""
+CREATE (p3:Process {name: ""Sprinkle yeast over water""}) SET p3.referenceText = ""Sprinkle yeast over water.""
+CREATE (p4:Process {name: ""Sprinkle sugar over yeast""}) SET p4.referenceText = ""Sprinkle 1 teaspoon of sugar over yeast.""
+CREATE (p5:Process {name: ""Let stand until foamy""}) SET p5.referenceText = ""Let stand about 10 minutes or until foamy.""
+CREATE (:Process {name: ""Stir"", referenceText: ""Stir if not smooth""})
+CREATE (:Process {name: ""Oil a large bowl"", referenceText: ""Oil a large bowl""})
+CREATE (:Process {name: ""Fit food processor with dough blade"", referenceText: ""Fit food processor with dough blade""})
+CREATE (:Process {name: ""Combine 2 3/4 cups flour and remaining sugar in food processor"", referenceText: ""Combine 2 3/4 cups flour and remaining sugar in food processor""})
+CREATE (:Process {name: ""Process briefly to mix"", referenceText: ""Process briefly to mix""})
+CREATE (:Process {name: ""Add yeast mixture"", referenceText: ""Add yeast mixture, oil, eggs, and salt.""})
+CREATE (:Process {name: ""Pour in remaining water"", referenceText: ""With blades of processor turning, pour in remaining water.""})
+CREATE (:Process {name: ""Process until ingredients come together to form a soft dough"", referenceText: ""Process until ingredients come together to form a soft dough; it will not form a ball.""})
+CREATE (:Process {name: ""Process for about 30 seconds to knead dough"", referenceText: ""Process for about 30 seconds to knead dough.""})
+CREATE (:Process {name: ""Pinch dough quickly"", referenceText: ""Pinch dough quickly; if it sticks to your fingers, add more flour 1 tablespoon at a time, until dough is no longer very sticky.""})
+CREATE (:Process {name: ""Add more flour 1 tablespoon at a time until dough is no longer very sticky"", referenceText: ""Pinch dough quickly; if it sticks to your fingers, add more flour 1 tablespoon at a time, until dough is no longer very sticky.""})
+                 CREATE (p1:Process {name: ""Knead"", referenceText: ""Knead again by processing about 30 seconds or until smooth.""})
+                 CREATE (p2:Process {name: ""Shape"", referenceText: ""Remove dough from processor and shape it into a rough ball in your hands.""})
+                 CREATE (p3:Process {name: ""Oil"", referenceText: ""Put dough into oiled bowl and turn dough over to oil all surfaces.""})
+                 CREATE (p4:Process {name: ""Cover"", referenceText: ""Cover with warm, slightly damp towel or plastic wrap and let rise in warm draft-free area about 1 hour 15 minutes or until doubled.""})
+                 CREATE (p5:Process {name: ""Remove"", referenceText: ""Remove dough with rubber spatula to work surface.""})
+CREATE (:Process {name: ""Knead dough lightly"", referenceText: ""Knead dough lightly again about 30 seconds to knock out air.""})
+
+CREATE (:Process {name: ""Clean bowl"", referenceText: ""Clean bowl if necessary.""})
+
+CREATE (:Process {name: ""Return dough to bowl, cover, and let rise"", referenceText: ""Return dough to bowl, cover, and let rise again until doubled, about 1 hour.""})
+
+CREATE (:Process {name: ""Shape and bake dough"", referenceText: ""Shape and bake dough as desired (see recipes).""})
+
+CREATE (:Process {name: ""Hand-Kneading Bread Dough"", referenceText: ""Hand-Kneading Bread Dough: You can knead bread dough in a mixer with a dough hook or in a food processor.""})
+CREATE (p1:Process {name: ""kneading dough by hand"", referenceText: ""If you are making the dough by hand, there are two basic techniques for kneading it: the slapping method, used for soft doughs; and the conventional bread dough method, pushing with your palms.""})
+
+CREATE (p2:Process {name: ""choosing kneading method for challah dough"", referenceText: ""Since challah dough is quite soft when I knead it by hand, I prefer the slapping method, which I learned in France.""})
+
+CREATE (p3:Process {name: ""kneading dough with slapping method"", referenceText: ""With this method, you end up adding less flour and the dough stays softer, resulting in a bread that is more moist.""})
+
+CREATE (p4:Process {name: ""kneading dough with conventional bread dough method"", referenceText: ""If you are used to the conventional method or feel more comfortable with it, however, you can use it.""})
+
+CREATE (p5:Process {name: ""choosing kneading method for bagel dough"", referenceText: ""Bagel dough is firmer than challah dough and works equally well by either method.""})
+                 CREATE (p1:Process {name: ""Slapping Method of Kneading"", referenceText: ""Slapping Method of Kneading: With the dough on the work surface, place your hands next to each other on top of the dough, holding it lightly in your fingertips.""})
+                 CREATE (p2:Process {name: ""Pulling up and slapping dough"", referenceText: ""Pull up the dough and slap it vigorously onto the work surface.""})
+                 CREATE (p3:Process {name: ""Grasping and repeating"", referenceText: ""Grasp the dough again at a different place, and repeat.""})
+                 CREATE (p4:Process {name: ""Continuing to slap dough"", referenceText: ""Continue slapping dough, lightly flouring the surface if necessary to prevent excessive sticking, until the dough is smooth and elastic and holds together in one piece.""})
+                 CREATE (p5:Process {name: ""Checking dough consistency"", referenceText: ""Its all right if the dough is still slightly sticky but it should be much less sticky than it was before kneading.""})
+CREATE (:Process {name: ""Handle the dough lightly and quickly"", referenceText: ""Be sure to handle the dough lightly and quickly so it does not stick much to your fingers""})
+CREATE (:Process {name: ""Put the dough on the work surface"", referenceText: ""Conventional Method of Kneading: Put the dough on the work surface""})
+CREATE (:Process {name: ""Push the dough away from you against the work surface with the palm of your hand"", referenceText: ""Push the dough away from you against the work surface with the palm of your hand""})
+CREATE (:Process {name: ""Turn the dough, fold its top third down toward you, and push it again"", referenceText: ""Turn the dough, fold its top third down toward you, and push it again""})
+CREATE (:Process {name: ""Kneading the dough"", referenceText: ""Continue kneading the dough, flouring the work surface as necessary to prevent excessive sticking, until the dough is smooth and elastic""})Match (p:Process)
+Where (p.name = 'mixing dough' or p.referenceText = 'Use a heavy-duty mixer with a dough hook for this recipe.')
+SET p.duration = '5 minutes'
+
+Match (p:Process)
+Where p.name = 'kneading dough' or p.referenceText = 'Hand-Kneading Bread Dough: You can knead bread dough in a mixer with a dough hook or in a food processor.'
+SET p.duration = '7 minutes'
+
+Match (p:Process)
+Where p.name = 'adjusting flour amount'
+SET p.referenceText = 'Adjusting flour amount is variable based on the dough texture.'
+
+Match (p:Process)
+Where p.name = 'keeping dough soft'
+SET p.referenceText = 'Soft dough gives the lightest, most delicious bread.'
+
+Match (p:Process)
+Where p.name = 'braiding dough'
+SET p.referenceText = 'Braiding dough to create the desired shape.'
+
+Match (p:Process)
+Where p.name = 'Pour water into a small bowl' or p.referenceText = 'Pour 1/4 cup of the water into small bowl.'
+SET p.duration = '1 minute'
+
+Match (p:Process)
+Where p.name = 'Sprinkle yeast over the water' or p.referenceText = 'Sprinkle yeast over water.'
+SET p.duration = '10 minutes'
+
+Match (p:Process)
+Where p.name = 'Sprinkle sugar over yeast' or p.referenceText = 'Sprinkle 1 teaspoon of sugar over yeast.'
+SET p.duration = '10 minutes'
+
+Match (p:Process)
+Where p.name = 'Let yeast mixture stand about 10 minutes or until foamy' or p.referenceText = 'Let stand about 10 minutes or until foamy.'
+SET p.duration = '10 minutes'
+
+Match (p:Process)
+Where p.name = 'Stir if not smooth'
+SET p.referenceText = 'Stir yeast mixture to ensure smooth texture.'
+
+Match (p:Process)
+Where p.name = 'Oil a large bowl'
+SET p.referenceText = 'Coat a large bowl with oil for dough rising.'
+
+Match (p:Process)
+Where p.name = 'Sift 2 3/4 cups of the flour into a large bowl'
+SET p.duration = '1 minute'
+
+Match (p:Process)
+Where p.name = 'Make large, deep well in center of flour'
+SET p.referenceText = 'Create a well in the flour for mixing ingredients.'
+
+Match (p:Process)
+Where p.name = 'Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well'
+SET p.referenceText = 'Combine all wet ingredients in the well created in the flour.'
+
+Match (p:Process)
+Where p.name = 'Mix ingredients in well with a wooden spoon until blended'
+SET p.duration = '2 minutes'
+
+Match (p:Process)
+Where p.name = 'Mix in flour'
+SET p.referenceText = 'Gradually incorporate flour into the mixture.'
+
+Match (p:Process)
+Where p.name = 'Knead dough'
+SET p.referenceText = 'Knead dough until smooth and elastic.'
+
+Match (p:Process)
+Where p.name = 'Put dough into oiled bowl'
+SET p.referenceText = 'Transfer the kneaded dough into an oiled bowl.'
+
+Match (p:Process)
+Where p.name = 'Cover dough'
+SET p.referenceText = 'Cover the bowl with a warm, damp towel or plastic wrap for rising.'
+
+Match (p:Process)
+Where p.name = 'Remove dough'
+SET p.referenceText = 'Take out the risen dough for shaping.'
+
+Match (p:Process)
+Where p.name = 'Knead dough lightly'
+SET p.referenceText = 'Knead the dough lightly to remove air bubbles.'
+
+Match (p:Process)
+Where p.name = 'Clean bowl'
+SET p.referenceText = 'Clean the bowl if necessary for dough rising.'
+
+Match (p:Process)
+Where p.name = 'Return dough to bowl, cover, and let rise'
+SET p.referenceText = 'Place the kneaded dough back into the bowl, cover, and allow it to rise again.'
+
+Match (p:Process)
+Where p.name = 'Shape and bake dough'
+SET p.duration = 'Varies based on recipe'```cypher
+CREATE (:Condition {name: ""fry until light brown""})
+```
+             MATCH (p:Process), (c:Condition)
+             WHERE p.name = ""Mixing dough"" AND c.name = ""fry until light brown""
+             MERGE (p)-[r:SATISFIES]->(c)
+
+             MATCH (p:Process), (c:Condition)
+             WHERE p.name = ""Kneading dough"" AND c.name = ""fry until light brown""
+             MERGE (p)-[r:SATISFIES]->(c)
+
+             MATCH (p:Process), (c:Condition)
+             WHERE p.name = ""Adjusting flour amount"" AND c.name = ""fry until light brown""
+             MERGE (p)-[r:SATISFIES]->(c)
+
+             MATCH (p:Process), (c:Condition)
+             WHERE p.name = ""Keeping dough soft"" AND c.name = ""fry until light brown""
+             MERGE (p)-[r:SATISFIES]->(c)
+
+             MATCH (p:Process), (c:Condition)
+             WHERE p.name = ""Braiding dough"" AND c.name = ""fry until light brown""
+             MERGE (p)-[r:SATISFIES]->(c)
+
+             MATCH (p:Process), (c:Condition)
+             WHERE p.name = ""Pour water into a small bowl"" AND c.name = ""fry until light brown""
+             MERGE (p)-[r:SATISFIES]->(c)
+
+             ... (remaining queries for each process from the list to each condition) ...
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Pour water into a small bowl"" or p.name = ""Sprinkle yeast over the water"" or p.name = ""Sprinkle sugar over yeast"" or p.name = ""Let yeast mixture stand about 10 minutes or until foamy"" or p.name = ""Oil a large bowl"" or p.name = ""Sift 2 3/4 cups of the flour into a large bowl"" or p.name = ""Make large, deep well in center of flour"" or p.name = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well"" or p.name = ""Mix ingredients in well with a wooden spoon until blended"" or p.name = ""Mix in flour"" or p.name = ""Knead dough"" or p.name = ""Put dough into oiled bowl"" or p.name = ""Cover dough"" or p.name = ""Remove dough"" or p.name = ""Knead dough"" or p.name = ""Clean bowl"" or p.name = ""Return dough to bowl"" or p.name = ""Shape and bake dough"" or p.name = ""Use a heavy-duty mixer with a dough hook"" or p.name = ""Pour water into a small bowl"" or p.name = ""Sprinkle yeast into water"" or p.name = ""Sprinkle sugar into yeast water"" or p.name = ""Let stand until foamy"" or p.name = ""Oil a large bowl"" or p.name = ""Sift 2 3/4 cups flour into bowl of mixer fitted with dough hook"" or p.name = ""Make large, deep well in center of flour"" or p.name = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well"" or p.name = ""Mix at medium-low speed, pushing flour in often at first and scraping dough down occasionally from bowl and from hook, until ingredients come together in a soft, sticky dough"" or p.name = ""Add remaining flour"" or p.name = ""Mix dough at medium speed"" or p.name = ""Pinch dough quickly"" or p.name = ""Mix at medium speed"" or p.name = ""Dough should be soft, smooth, and elastic"" or p.name = ""Put dough into oiled bowl"" or p.name = ""Cover with warm, slightly damp towel or plastic wrap"" or p.name = ""Let rise in warm draft-free area about 1 1/4 hours or until nearly doubled"" or p.name = ""Knead dough lightly in bowl to knock out air"" or p.name = ""Cover and let rise again about 1 hour or until nearly doubled"" or p.name = ""Shape and bake dough"" or p.name = ""Mix and knead dough"" or p.name = ""Limit amount based on food processor size"" or p.name = ""Prepare dough"" or p.name = ""Use food processor"" or p.name = ""Skip the dough's second rising"")
+and i.name = ""warm water""
+Merge (i)-[r:PREREQ_FOR]->(p)
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Pour water into small bowl"" or p.referenceText = ""Pour water into small bowl"") and i.name = ""warm water""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Sprinkle yeast over water"" or p.referenceText = ""Sprinkle yeast over water"") and i.name = ""dry yeast""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Sprinkle sugar over yeast"" or p.referenceText = ""Sprinkle sugar over yeast"") and i.name = ""sugar""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Fit food processor with dough blade"" or p.referenceText = ""Fit food processor with dough blade"") and i.name = ""unbleached all-purpose flour""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Oil a large bowl"" or p.referenceText = ""Oil a large bowl"") and i.name = ""vegetable oil""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Add yeast mixture"" or p.referenceText = ""Add yeast mixture"") and i.name = ""dry yeast""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Add yeast mixture"" or p.referenceText = ""Add yeast mixture"") and i.name = ""oil""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Add yeast mixture"" or p.referenceText = ""Add yeast mixture"") and i.name = ""eggs""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Add yeast mixture"" or p.referenceText = ""Add yeast mixture"") and i.name = ""salt""
+Merge (i)-[r:PREREQ_FOR]->(p)Match (p:Process), (t:Tool)
+Where (p.referenceText = ""Mixing dough"" or p.referenceText = ""Kneading dough"" or p.referenceText = ""Adjusting flour amount"" or p.referenceText = ""Keeping dough soft"" or p.referenceText = ""Braiding dough"" or p.referenceText = ""Pour water into a small bowl"" or p.referenceText = ""Sprinkle yeast over the water"" or p.referenceText = ""Sprinkle sugar over yeast"" or p.referenceText = ""Let yeast mixture stand about 10 minutes or until foamy"" or p.referenceText = ""Oil a large bowl"" or p.referenceText = ""Sift 2 3/4 cups of the flour into a large bowl"" or p.referenceText = ""Make large, deep well in center of flour"" or p.referenceText = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well"" or p.referenceText = ""Mix ingredients in well with a wooden spoon until blended"" or p.referenceText = ""Mix in flour"" or p.referenceText = ""Knead dough"" or p.referenceText = ""Put dough into oiled bowl"" or p.referenceText = ""Cover dough"" or p.referenceText = ""Remove dough"" or p.referenceText = ""Knead dough"" or p.referenceText = ""Clean bowl"" or p.referenceText = ""Return dough to bowl"" or p.referenceText = ""Shape and bake dough"" or p.referenceText = ""Use a heavy-duty mixer with a dough hook"" or p.referenceText = ""Pour water into a small bowl"" or p.referenceText = ""Sprinkle yeast into water"" or p.referenceText = ""Sprinkle sugar into yeast water"" or p.referenceText = ""Let stand until foamy"" or p.referenceText = ""Sift 2 3/4 cups flour into bowl of mixer fitted with dough hook"" or p.referenceText = ""Make large, deep well in center of flour"" or p.referenceText = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well"" or p.referenceText = ""Mix at medium-low speed, pushing flour in often at first and scraping dough down occasionally from bowl and from hook, until ingredients come together in a soft, sticky dough"" or p.referenceText = ""Add remaining flour"" or p.referenceText = ""Mix dough at medium speed"" or p.referenceText = ""Pinch dough quickly"" or p.referenceText = ""Mix at medium speed"" or p.referenceText = ""Dough should be soft, smooth, and elastic"" or p.referenceText = ""Put dough into oiled bowl"" or p.referenceText = ""Cover with warm, slightly damp towel or plastic wrap"" or p.referenceText = ""Let rise in warm draft-free area about 1 1/4 hours or until nearly doubled"" or p.referenceText = ""Knead dough lightly in bowl to knock out air"" or p.referenceText = ""Cover and let rise again about 1 hour or until nearly doubled"" or p.referenceText = ""Shape and bake dough"" or p.referenceText = ""Mix and knead dough"" or p.referenceText = ""Limit amount based on food processor size"" or p.referenceText = ""Prepare dough"" or p.referenceText = ""Use food processor"" or p.referenceText = ""Skip the dough's second rising, If you are in a hurry, you can skip the doughs second rising; the loaf wont be quite as light but it will still taste good."") and (t.name = ""wooden spoon"" or t.name = ""rubber spatula"" or t.name = ""work surface"" or t.name = ""mixer"" or t.name = ""food processor"" or t.name = ""dough hook"")
+MERGE (t)-[:USES]->(p)
+Match (p:Process), (t:Tool)
+Where (p.name = ""Pour water into small bowl"" or p.referenceText = ""Pour 1/4 cup of the water into small bowl."") and t.name = ""wooden spoon""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Sprinkle yeast over water"" or p.referenceText = ""Sprinkle yeast over water."") and t.name = ""wooden spoon""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Sprinkle sugar over yeast"" or p.referenceText = ""Sprinkle 1 teaspoon of sugar over yeast."") and t.name = ""wooden spoon""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Let stand until foamy"" or p.referenceText = ""Let stand about 10 minutes or until foamy."") and t.name = ""large bowl""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Stir"" or p.referenceText = ""Stir if not smooth."") and t.name = ""wooden spoon""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Oil a large bowl"" or p.referenceText = ""Oil a large bowl."") and t.name = ""large bowl""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Fit food processor with dough blade"" or p.referenceText = ""Fit food processor with dough blade."") and t.name = ""food processor""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Combine 2 3/4 cups flour and remaining sugar in food processor"" or p.referenceText = ""Combine 2 3/4 cups flour and remaining sugar in food processor."") and t.name = ""food processor""
+MERGE (t)-[r:USES]->(p) 
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Sift 2 3/4 cups of the flour into a large bowl"" and p2.name = ""Make large, deep well in center of flour""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Make large, deep well in center of flour"" and p2.name = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well"" and p2.name = ""Mix ingredients in well with a wooden spoon until blended""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Mix ingredients in well with a wooden spoon until blended"" and p2.name = ""Mix in flour""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Mix in flour"" and p2.name = ""Knead dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Knead dough"" and p2.name = ""Put dough into oiled bowl""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Put dough into oiled bowl"" and p2.name = ""Cover dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Knead dough lightly in bowl to knock out air"" and p2.name = ""Cover and let rise again about 1 hour or until nearly doubled""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+ 
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Pour water into a small bowl"" and p2.name = ""Sprinkle yeast over the water""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Sprinkle yeast over the water"" and p2.name = ""Sprinkle sugar over yeast""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Sprinkle sugar over yeast"" and p2.name = ""Let yeast mixture stand about 10 minutes or until foamy""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Let yeast mixture stand about 10 minutes or until foamy"" and p2.name = ""Stir if not smooth""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+ 
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Oil a large bowl"" and p2.name = ""Sift 2 3/4 cups of the flour into a large bowl""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Sift 2 3/4 cups of the flour into a large bowl"" and p2.name = ""Make large, deep well in center of flour""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Make large, deep well in center of flour"" and p2.name = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well"" and p2.name = ""Mix ingredients in well with a wooden spoon until blended""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+  
+                Match (p1:Process), (p2:Process)
+                Where p1.name = ""Mix in flour"" and p2.name = ""Knead dough""
+                Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                Match (p1:Process), (p2:Process)
+                Where p1.name = ""Knead dough"" and p2.name = ""Adjust flour amount""
+                Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                Match (p1:Process), (p2:Process)
+                Where p1.name = ""Adjust flour amount"" and p2.name = ""Keeping dough soft""
+                Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                Match (p1:Process), (p2:Process)
+                Where p1.name = ""Keeping dough soft"" and p2.name = ""Braiding dough""
+                Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                Match (p1:Process), (p2:Process)
+                Where p1.name = ""Braiding dough"" and p2.name = ""Put dough into oiled bowl""
+                Create (p1)-[r:FOLLOWED_BY]->(p2) 
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Remove dough"" and p2.name = ""Knead dough lightly""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Knead dough lightly"" and p2.name = ""Clean bowl""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Clean bowl"" and p2.name = ""Return dough to bowl""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Return dough to bowl"" and p2.name = ""Cover""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Cover"" and p2.name = ""Let rise again""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Let rise again"" and p2.name = ""Shape and bake dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = 'Pour water into a small bowl' and p2.name = 'Sprinkle yeast over the water'
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = 'Sprinkle yeast over the water' and p2.name = 'Sprinkle sugar over yeast'
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = 'Sprinkle sugar over yeast' and p2.name = 'Let stand until foamy'
+Create (p1)-[r:FOLLOWED_BY]->(p2) 
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Oil a large bowl"" and p2.name = ""Sift 2 3/4 cups flour into bowl of mixer fitted with dough hook""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Sift 2 3/4 cups flour into bowl of mixer fitted with dough hook"" and p2.name = ""Make large, deep well in center of flour""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Make large, deep well in center of flour"" and p2.name = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well"" and p2.name = ""Mix at medium-low speed, pushing flour in often at first and scraping dough down occasionally from bowl and from hook, until ingredients come together in a soft, sticky dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+ 
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Add yeast mixture"" and p2.name = ""Sprinkle sugar over yeast""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Sprinkle sugar over yeast"" and p2.name = ""Let stand until foamy""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Let stand until foamy"" and p2.name = ""Stir""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Stir"" and p2.name = ""Oil a large bowl""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Oil a large bowl"" and p2.name = ""Sift 2 3/4 cups of the flour into a large bowl""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Sift 2 3/4 cups of the flour into a large bowl"" and p2.name = ""Make large, deep well in center of flour""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Make large, deep well in center of flour"" and p2.name = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well"" and p2.name = ""Mix ingredients in well with a wooden spoon until blended""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Mix ingredients in well with a wooden spoon until blended"" and p2.name = ""Mix in flour""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Mix in flour"" and p2.name = ""Knead dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Knead dough"" and p2.name = ""Put dough into oiled bowl""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Put dough into oiled bowl"" and p2.name = ""Cover dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Cover dough"" and p2.name = ""Remove dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Remove dough"" and p2.name = ""Knead dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+ 
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Put dough into oiled bowl"" and p2.name = ""Cover with warm, slightly damp towel or plastic wrap""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Cover with warm, slightly damp towel or plastic wrap"" and p2.name = ""Let rise in warm draft-free area about 1 1/4 hours or until nearly doubled""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Let rise in warm draft-free area about 1 1/4 hours or until nearly doubled"" and p2.name = ""Knead dough lightly in bowl to knock out air""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Knead dough lightly in bowl to knock out air"" and p2.name = ""Cover and let rise again about 1 hour or until nearly doubled""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+ 
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Pour water into small bowl"" and p2.name = ""Sprinkle yeast over water""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Sprinkle yeast over water"" and p2.name = ""Sprinkle sugar over yeast""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Sprinkle sugar over yeast"" and p2.name = ""Let stand until foamy""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Let stand until foamy"" and p2.name = ""Stir""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Stir"" and p2.name = ""Oil a large bowl""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Oil a large bowl"" and p2.name = ""Sift 2 3/4 cups of the flour into a large bowl""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Sift 2 3/4 cups of the flour into a large bowl"" and p2.name = ""Make large, deep well in center of flour""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Make large, deep well in center of flour"" and p2.name = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well"" and p2.name = ""Mix ingredients in well with a wooden spoon until blended""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Mix ingredients in well with a wooden spoon until blended"" and p2.name = ""Mix in flour""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Mix in flour"" and p2.name = ""Knead dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+ 
+Match (p1:Process), (p2:Process)
+Where p1.name = 'Pour water into small bowl' and p2.name = 'Sprinkle yeast over water'
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = 'Sprinkle yeast over water' and p2.name = 'Sprinkle sugar over yeast'
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = 'Sprinkle sugar over yeast' and p2.name = 'Let stand until foamy'
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+ 
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Stir if not smooth"" and p2.name = ""Oil a large bowl""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Oil a large bowl"" and p2.name = ""Fit food processor with dough blade""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Fit food processor with dough blade"" and p2.name = ""Combine 2 3/4 cups flour and remaining sugar in food processor""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Combine 2 3/4 cups flour and remaining sugar in food processor"" and p2.name = ""Process briefly to mix""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                 Match (p1:Process), (p2:Process)
+                 Where p1.name = ""Pour water into a small bowl"" and p2.name = ""Sprinkle yeast over water""
+                 Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                 Match (p1:Process), (p2:Process)
+                 Where p1.name = ""Sprinkle yeast over water"" and p2.name = ""Sprinkle sugar over yeast""
+                 Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                 Match (p1:Process), (p2:Process)
+                 Where p1.name = ""Sprinkle sugar over yeast"" and p2.name = ""Let stand until foamy""
+                 Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                 Match (p1:Process), (p2:Process)
+                 Where p1.name = ""Let stand until foamy"" and p2.name = ""Stir""
+                 Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                 Match (p1:Process), (p2:Process)
+                 Where p1.name = ""Stir"" and p2.name = ""Oil a large bowl""
+                 Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                 Match (p1:Process), (p2:Process)
+                 Where p1.name = ""Oil a large bowl"" and p2.name = ""Sift 2 3/4 cups flour into bowl of mixer fitted with dough hook""
+                 Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                 Match (p1:Process), (p2:Process)
+                 Where p1.name = ""Sift 2 3/4 cups flour into bowl of mixer fitted with dough hook"" and p2.name = ""Make large, deep well in center of flour""
+                 Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                 Match (p1:Process), (p2:Process)
+                 Where p1.name = ""Make large, deep well in center of flour"" and p2.name = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well""
+                 Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                 Match (p1:Process), (p2:Process)
+                 Where p1.name = ""Add yeast mixture, remaining sugar, oil, eggs, remaining water, and salt to well"" and p2.name = ""Mix at medium-low speed, pushing flour in often at first and scraping dough down occasionally from bowl and from hook, until ingredients come together in a soft, sticky dough""
+                 Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                 Match (p1:Process), (p2:Process)
+                 Where p1.name = ""Mix at medium-low speed, pushing flour in often at first and scraping dough down occasionally from bowl and from hook, until ingredients come together in a soft, sticky dough"" and p2.name = ""Add remaining flour""
+                 Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                 Match (p1:Process), (p2:Process)
+                 Where p1.name = ""Add remaining flour"" and p2.name = ""Mix dough at medium speed""
+                 Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                 Match (p1:Process), (p2:Process)
+                 Where p1.name = ""Mix dough at medium speed"" and p2.name = ""Pinch dough quickly""
+                 Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                 Match (p1:Process), (p2:Process)
+                 Where p1.name = ""Pinch dough quickly"" and p2.name = ""Add more flour 1 tablespoon at a time until dough is no longer very sticky""
+                 Create (p1)-[r:FOLLOWED_BY]->(p2) 
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Knead"" and p2.name = ""Remove""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Remove"" and p2.name = ""Put dough into oiled bowl""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Put dough into oiled bowl"" and p2.name = ""Cover""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Cover"" and p2.name = ""Remove""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+ 
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Knead dough"" and p2.name = ""Clean bowl""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Clean bowl"" and p2.name = ""Return dough to bowl, cover, and let rise""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Return dough to bowl, cover, and let rise"" and p2.name = ""Shape and bake dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Shape and bake dough"" and p2.name = ""Hand-Kneading Bread Dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+Match (p1:Process), (p2:Process)
+Where p1.name = ""kneading dough"" and p2.name = ""choosing kneading method for challah dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""choosing kneading method for challah dough"" and p2.name = ""kneading dough with slapping method""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""kneading dough with slapping method"" and p2.name = ""Slapping Method of Kneading""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Push the dough away from you against the work surface with the palm of your hand"" and p2.name = ""Turn the dough, fold its top third down toward you, and push it again""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Turn the dough, fold its top third down toward you, and push it again"" and p2.name = ""Kneading the dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2) 
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Slapping Method of Kneading"" and p2.name = ""Pulling up and slapping dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Pulling up and slapping dough"" and p2.name = ""Grasping and repeating""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Grasping and repeating"" and p2.name = ""Continuing to slap dough""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Continuing to slap dough"" and p2.name = ""Checking dough consistency""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Handle the dough lightly and quickly"" and p2.name = ""Put the dough on the work surface""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Put the dough on the work surface"" and p2.name = ""Push the dough away from you against the work surface with the palm of your hand""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Push the dough away from you against the work surface with the palm of your hand"" and p2.name = ""Turn the dough, fold its top third down toward you, and push it again""
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where p1.name = ""Turn the dough, fold its top third down toward you, and push it again"" and p2.name = ""Continue kneading the dough, flouring the work surface as necessary to prevent excessive sticking, until the dough is smooth and elastic""
+Create (p1)-[r:FOLLOWED_BY]->(p2)```cypher
+CREATE (finalProduct:FinalProduct {name: ""Challah Bread Recipe""})
+```MATCH (p:Process), (f:FinalProduct)
+WHERE (p.name = ""Put the dough on the work surface"" or p.referenceText = ""Conventional Method of Kneading: Put the dough on the work surface"") and f.name = ""Challah Bread Recipe""
+MERGE (p)-[:CREATES]->(f)"

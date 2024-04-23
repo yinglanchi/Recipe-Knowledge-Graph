@@ -1,0 +1,1417 @@
+"Recipe Name: Pecan Pie. Ingredients: 1 1/2 c. chopped pecans, 3 eggs, 1 c. sugar, 1 c. light corn syrup, dash of salt, 1 tsp. vanilla, 4 Tbsp. butter, melted, 1 pie crust, Instructions: Mix all ingredients together. Pourtinto pie crust. Bake in preheated 325u00b0 oven for about 45 minutes.","CREATE (:Ingredient {name: ""chopped pecans"", quantity: ""1 1/2 c.""})
+CREATE (:Ingredient {name: ""eggs"", quantity: ""3""})
+CREATE (:Ingredient {name: ""sugar"", quantity: ""1 c.""})
+CREATE (:Ingredient {name: ""light corn syrup"", quantity: ""1 c.""})
+CREATE (:Ingredient {name: ""salt"", quantity: ""dash""})
+CREATE (:Ingredient {name: ""vanilla"", quantity: ""1 tsp.""})
+CREATE (:Ingredient {name: ""butter"", quantity: ""4 Tbsp.""})
+CREATE (:Ingredient {name: ""pie crust""})
+CREATE (chopped_pecans:Ingredient {name: ""chopped pecans""})
+CREATE (eggs:Ingredient {name: ""eggs""})
+CREATE (sugar:Ingredient {name: ""sugar""})
+CREATE (light_corn_syrup:Ingredient {name: ""light corn syrup""})
+CREATE (salt:Ingredient {name: ""salt""})
+CREATE (vanilla:Ingredient {name: ""vanilla""})
+CREATE (butter:Ingredient {name: ""butter""})
+CREATE (pie_crust:Ingredient {name: ""pie crust""})
+                    CREATE (mix:Process {name: ""Mix"", referenceText: ""Mix all ingredients together.""})
+                    CREATE (pour:Process {name: ""Pour"", referenceText: ""Pourt into pie crust.""})
+                    CREATE (bake:Process {name: ""Bake"", referenceText: ""Bake in preheated 325u00b0 oven for about 45 minutes.""})
+                   
+Match (p:Process)
+Where p.name = 'Bake' or p.referenceText = 'Bake in preheated 325u00b0 oven for about 45 minutes.'
+SET p.duration = 'about 45 minutes',
+p.temperature = '325u00b0'
+
+Match (p:Process)
+Where p.name = 'Mix' or p.referenceText = 'Mix all ingredients together.'
+SET p.duration = null,
+p.temperature = null
+
+Match (p:Process)
+Where p.name = 'Pour' or p.referenceText = 'Pourt into pie crust.'
+SET p.duration = null,
+p.temperature = null```cypher
+CREATE (:Condition {name: ""chopped pecans""})
+CREATE (:Condition {name: ""eggs""})
+CREATE (:Condition {name: ""sugar""})
+CREATE (:Condition {name: ""light corn syrup""})
+CREATE (:Condition {name: ""salt""})
+CREATE (:Condition {name: ""vanilla""})
+CREATE (:Condition {name: ""butter, melted""})
+CREATE (:Condition {name: ""pie crust""})
+CREATE (:Condition {name: ""Mix all ingredients together""})
+CREATE (:Condition {name: ""Pour into pie crust""})
+CREATE (:Condition {name: ""Bake in preheated 325u00b0 oven for about 45 minutes""})
+```
+             Match (p:Process), (c:Condition)
+             Where p.name = ""Mix"" and c.name = ""chopped pecans""
+             Merge (p)-[r:SATISFIES]->(c)
+
+             Match (p:Process), (c:Condition)
+             Where p.name = ""Mix"" and c.name = ""eggs""
+             Merge (p)-[r:SATISFIES]->(c)
+
+             Match (p:Process), (c:Condition)
+             Where p.name = ""Mix"" and c.name = ""sugar""
+             Merge (p)-[r:SATISFIES]->(c)
+
+             Match (p:Process), (c:Condition)
+             Where p.name = ""Mix"" and c.name = ""light corn syrup""
+             Merge (p)-[r:SATISFIES]->(c)
+
+             Match (p:Process), (c:Condition)
+             Where p.name = ""Mix"" and c.name = ""salt""
+             Merge (p)-[r:SATISFIES]->(c)
+
+             Match (p:Process), (c:Condition)
+             Where p.name = ""Mix"" and c.name = ""vanilla""
+             Merge (p)-[r:SATISFIES]->(c)
+
+             Match (p:Process), (c:Condition)
+             Where p.name = ""Mix"" and c.name = ""butter, melted""
+             Merge (p)-[r:SATISFIES]->(c)
+
+             Match (p:Process), (c:Condition)
+             Where p.name = ""Mix"" and c.name = ""pie crust""
+             Merge (p)-[r:SATISFIES]->(c)
+
+             Match (p:Process), (c:Condition)
+             Where p.name = ""Mix"" and c.name = ""Mix all ingredients together""
+             Merge (p)-[r:SATISFIES]->(c)
+
+             Match (p:Process), (c:Condition)
+             Where p.name = ""Pour"" and c.name = ""Pour into pie crust""
+             Merge (p)-[r:SATISFIES]->(c)
+
+             Match (p:Process), (c:Condition)
+             Where p.name = ""Bake"" and c.name = ""Bake in preheated 325u00b0 oven for about 45 minutes""
+             Merge (p)-[r:SATISFIES]->(c)Match (p:Process), (i:Ingredient)
+Where (p.name = ""Mix"" or p.referenceText = ""Mix all ingredients together."") and i.name = ""chopped pecans""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Mix"" or p.referenceText = ""Mix all ingredients together."") and i.name = ""eggs""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Mix"" or p.referenceText = ""Mix all ingredients together."") and i.name = ""sugar""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Mix"" or p.referenceText = ""Mix all ingredients together."") and i.name = ""light corn syrup""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Mix"" or p.referenceText = ""Mix all ingredients together."") and i.name = ""salt""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Pour"" or p.referenceText = ""Pourt into pie crust."") and i.name = ""pie crust""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Bake"" or p.referenceText = ""Bake in preheated 325u00b0 oven for about 45 minutes."") and i.name = ""butter""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Bake"" or p.referenceText = ""Bake in preheated 325u00b0 oven for about 45 minutes."") and i.name = ""vanilla""
+Merge (i)-[r:PREREQ_FOR]->(p)Match (p:Process), (t:Tool)
+Where (p.name = ""Mix"" or p.referenceText = ""Mix all ingredients together."")
+and t.name = ""oven""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Pour"" or p.referenceText = ""Pourt into pie crust."")
+and t.name = ""pie crust""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Bake"" or p.referenceText = ""Bake in preheated 325u00b0 oven for about 45 minutes."")
+and t.name = ""oven""
+MERGE (t)-[r:USES]->(p)
+Match (p1:Process), (p2:Process)
+Where (p1.name = 'Mix' or p1.referenceText = 'Mix all ingredients together.') and (p2.name = 'Pour' or p2.referenceText = 'Pourt into pie crust.')
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = 'Pour' or p1.referenceText = 'Pourt into pie crust.') and (p2.name = 'Bake' or p2.referenceText = 'Bake in preheated 325u00b0 oven for about 45 minutes.')
+Create (p1)-[r:FOLLOWED_BY]->(p2)```cypher
+CREATE (finalProduct:FinalProduct {name: ""Pie""})
+```MATCH (p:Process), (f:FinalProduct)
+WHERE (p.name = ""Bake"" or p.referenceText = ""Bake in preheated 325u00b0 oven for about 45 minutes."") and f.name = ""Pie""
+MERGE (p)-[:CREATES]->(f)"
+"Recipe Name: Lemon Strawberry Tarts. Ingredients: 1 package (18 ounces) refrigerated sugar cookie dough, 3/4 cup chilled lemon curd, 6 large fresh strawberries, sliced, Whipped cream, Instructions: Cut the cookie dough into 1/2-in. slices. Place 2 in. apart on ungreased . Bake at 350u00b0 for 11-12 minutes or until lightly browned. Remove to wire racks to cool. Spread six cookies with 2 tablespoons lemon curd. Garnish with strawberries and whipped cream. Save remaining cookies for another use.","
+CREATE (:Ingredient {name: ""refrigerated sugar cookie dough"", quantity: ""1 package (18 ounces)""})
+CREATE (:Ingredient {name: ""chilled lemon curd"", quantity: ""3/4 cup""})
+CREATE (:Ingredient {name: ""fresh strawberries"", quantity: ""6 large""})
+CREATE (:Ingredient {name: ""Whipped cream""})
+```cypher
+CREATE (sugarCookieDough:Ingredient {name: ""refrigerated sugar cookie dough""})
+CREATE (lemonCurd:Ingredient {name: ""lemon curd""})
+CREATE (strawberries:Ingredient {name: ""fresh strawberries""})
+CREATE (whippedCream:Ingredient {name: ""whipped cream""})
+```
+CREATE (:Process {name: ""Cut"", referenceText: ""Cut the cookie dough into 1/2-in. slices.""});
+CREATE (:Process {name: ""Place"", referenceText: ""Place 2 in. apart on ungreased .""});
+CREATE (:Process {name: ""Bake"", referenceText: ""Bake at 350u00b0 for 11-12 minutes or until lightly browned.""});
+CREATE (:Process {name: ""Remove""})-[:HAS_REFERENCE_TEXT]->(:ReferenceText {text: ""Remove to wire racks to cool.""})
+CREATE (:Process {name: ""Spread""})-[:HAS_REFERENCE_TEXT]->(:ReferenceText {text: ""Spread six cookies with 2 tablespoons lemon curd.""})
+CREATE (:Process {name: ""Garnish""})-[:HAS_REFERENCE_TEXT]->(:ReferenceText {text: ""Garnish with strawberries and whipped cream.""})
+CREATE (:Process {name: ""Save""})-[:HAS_REFERENCE_TEXT]->(:ReferenceText {text: ""Save remaining cookies for another use.""})
+             Match (p:Process)
+             Where (p.name = 'Cut' or p.referenceText = 'Cut the cookie dough into 1/2-in. slices.')
+             SET p.duration = null
+             
+             Match (p:Process)
+             Where (p.name = 'Place' or p.referenceText = 'Place 2 in. apart on ungreased .')
+             SET p.duration = null
+             
+             Match (p:Process)
+             Where (p.name = 'Bake' or p.referenceText = 'Bake at 350u00b0 for 11-12 minutes or until lightly browned.')
+             SET p.duration = '11-12 minutes',
+             p.temperature = '350u00b0'
+             
+             Match (p:Process)
+             Where p.name = 'Remove'
+             SET p.duration = null
+             
+             Match (p:Process)
+             Where p.name = 'Spread'
+             SET p.duration = null
+             
+             Match (p:Process)
+             Where p.name = 'Garnish'
+             SET p.duration = null
+             
+             Match (p:Process)
+             Where p.name = 'Save'
+             SET p.duration = null```cypher
+CREATE (:Condition {name: ""Cut the cookie dough into 1/2-in. slices""})
+CREATE (:Condition {name: ""Place 2 in. apart on ungreased""})
+CREATE (:Condition {name: ""Bake at 350u00b0 for 11-12 minutes or until lightly browned""})
+CREATE (:Condition {name: ""Remove to wire racks to cool""})
+CREATE (:Condition {name: ""Spread six cookies with 2 tablespoons lemon curd""})
+CREATE (:Condition {name: ""Garnish with strawberries and whipped cream""})
+```
+Match (p:Process), (c:Condition)
+Where p.name = ""Cut"" and c.name = ""Cut the cookie dough into 1/2-in. slices""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Place"" and c.name = ""Place 2 in. apart on ungreased""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Bake"" and c.name = ""Bake at 350u00b0 for 11-12 minutes or until lightly browned""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Remove"" and c.name = ""Remove to wire racks to cool""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Spread"" and c.name = ""Spread six cookies with 2 tablespoons lemon curd""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Garnish"" and c.name = ""Garnish with strawberries and whipped cream""
+Merge (p)-[r:SATISFIES]->(c)Match (p:Process), (i:Ingredient)
+Where (p.name = ""Spread"" or p.referenceText = """" or p.name = ""Garnish"") and i.name = ""lemon curd""
+Merge (i)-[r:PREREQ_FOR]->(p)Match (p:Process), (t:Tool)
+Where (p.name = ""Cut"" or p.referenceText = ""Cut the cookie dough into 1/2-in. slices."") and t.name = ""cookie dough""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Place"" or p.referenceText = ""Place 2 in. apart on ungreased ."") and t.name = ""baking sheet""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Bake"" or p.referenceText = ""Bake at 350u00b0 for 11-12 minutes or until lightly browned."") and t.name = ""oven""
+MERGE (t)-[r:USES]->(p)
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Cut"" or p1.referenceText = ""Cut the cookie dough into 1/2-in. slices."") and (p2.name = ""Place"" or p2.referenceText = ""Place 2 in. apart on ungreased ."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Place"" or p1.referenceText = ""Place 2 in. apart on ungreased ."") and (p2.name = ""Bake"" or p2.referenceText = ""Bake at 350u00b0 for 11-12 minutes or until lightly browned."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)Match (p1:Process), (p2:Process)
+Where (p1.name = 'Cut' or p1.referenceText = 'Cut the cookie dough into 1/2-in. slices.') and (p2.name = 'Place' or p2.referenceText = 'Place 2 in. apart on ungreased .')
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = 'Place' or p1.referenceText = 'Place 2 in. apart on ungreased .') and (p2.name = 'Bake' or p2.referenceText = 'Bake at 350u00b0 for 11-12 minutes or until lightly browned.')
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = 'Bake' or p1.referenceText = 'Bake at 350u00b0 for 11-12 minutes or until lightly browned.') and (p2.name = 'Remove' or p2.referenceText = '')
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = 'Remove' or p1.referenceText = '') and (p2.name = 'Spread' or p2.referenceText = '')
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = 'Spread' or p1.referenceText = '') and (p2.name = 'Garnish' or p2.referenceText = '')
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = 'Garnish' or p1.referenceText = '') and (p2.name = 'Save' or p2.referenceText = '')
+Create (p1)-[r:FOLLOWED_BY]->(p2)```cypher
+CREATE (rp:FinalProduct {name: ""Lemon Curd Cookie Recipe""})
+```MATCH (p:Process), (f:FinalProduct)
+WHERE (p.name = 'Save' or p.referenceText = 'Save remaining cookies for another use.') and f.name = 'Lemon Curd Cookie Recipe'
+MERGE (p)-[:CREATES]->(f)"
+"Recipe Name: Mimosa Float. Ingredients: champagne, triple sec, orange sorbet, Instructions: Place 1 small scoop sorbet in bottom of glass. Add 1 shot of triple sec. Fill glass slowly with champagne. Stir before drinking.","
+CREATE (:Ingredient {name: ""champagne""})
+CREATE (:Ingredient {name: ""triple sec"", measure: ""1 shot""})
+CREATE (:Ingredient {name: ""orange sorbet"", measure: ""1 small scoop""})
+CREATE (:Tool {name: ""glass""})
+CREATE (:Tool {name: ""scoop""})
+CREATE (:Tool {name: ""shot""})
+CREATE (:Process {name: ""Place sorbet in bottom of glass"", referenceText: ""1 small scoop sorbet""})
+CREATE (:Process {name: ""Add shot of triple sec"", referenceText: ""1 shot of triple sec""})
+CREATE (:Process {name: ""Fill glass slowly with champagne""})
+CREATE (:Process {name: ""Stir before drinking""})
+Match (p:Process)
+Where p.name = ""Place sorbet in bottom of glass"" or p.referenceText = ""1 small scoop sorbet""
+SET p.duration = ""N/A""
+
+Match (p:Process)
+Where p.name = ""Add shot of triple sec"" or p.referenceText = ""1 shot of triple sec""
+SET p.duration = ""N/A""
+
+Match (p:Process)
+Where p.name = ""Fill glass slowly with champagne""
+SET p.temperature = ""N/A""
+
+Match (p:Process)
+Where p.name = ""Stir before drinking""
+SET p.duration = ""N/A""```cypher
+CREATE (:Condition {name: ""Place 1 small scoop sorbet in bottom of glass""})
+CREATE (:Condition {name: ""Add 1 shot of triple sec""})
+CREATE (:Condition {name: ""Fill glass slowly with champagne""})
+CREATE (:Condition {name: ""Stir before drinking""})
+```Match (p:Process), (c:Condition)
+Where p.name = ""Place sorbet in bottom of glass"" and c.name = ""Place 1 small scoop sorbet in bottom of glass""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Add shot of triple sec"" and c.name = ""Add 1 shot of triple sec""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Fill glass slowly with champagne"" and c.name = ""Fill glass slowly with champagne""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Stir before drinking"" and c.name = ""Stir before drinking""
+Merge (p)-[r:SATISFIES]->(c)Match (p:Process), (i:Ingredient)
+Where (p.name = ""Place sorbet in bottom of glass"" or p.referenceText = ""1 small scoop sorbet"") and i.name = ""orange sorbet""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Add shot of triple sec"" or p.referenceText = ""1 shot of triple sec"") and i.name = ""triple sec""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Fill glass slowly with champagne"" or p.referenceText = """") and i.name = ""champagne""
+Merge (i)-[r:PREREQ_FOR]->(p)Match (p:Process), (t:Tool)
+Where (p.name = ""Place sorbet in bottom of glass"" or p.referenceText = ""Place 1 small scoop sorbet in bottom of glass"") and t.name = ""glass""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Add shot of triple sec"" or p.referenceText = ""Add 1 shot of triple sec"") and t.name = ""shot""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Fill glass slowly with champagne"" or p.referenceText = ""Fill glass slowly with champagne"") and t.name = ""glass""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Stir before drinking"" or p.referenceText = ""Stir before drinking"") and t.name = ""N/A""
+MERGE (t)-[r:USES]->(p) 
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Place sorbet in bottom of glass"" or p1.referenceText = ""1 small scoop sorbet"") and (p2.name = ""Add shot of triple sec"" or p2.referenceText = ""1 shot of triple sec"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Add shot of triple sec"" or p1.referenceText = ""1 shot of triple sec"") and (p2.name = ""Fill glass slowly with champagne"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Fill glass slowly with champagne"" and (p2.name = ""Stir before drinking"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+```cypher
+CREATE (:FinalProduct {name: ""Sorbet Champagne Cocktail Recipe""})
+```MATCH (p:Process), (f:FinalProduct)
+WHERE (p.name = ""Stir before drinking"" or p.referenceText = ""Stir before drinking"")
+AND f.name = ""Sorbet Champagne Cocktail Recipe""
+MERGE (p)-[:CREATES]->(f)"
+"Recipe Name: Frozen Cranberry Fruit Salad. Ingredients: 1 can whole cranberries, 1 can Eagle brand fat-free condensed milk, 1 c. chopped nuts, 1 8 oz. container Cool Whip, Instructions: Mix all ingredients and freeze.","
+CREATE (:Ingredient {name: ""whole cranberries"", quantity: 1, measure: ""can""})
+CREATE (:Ingredient {name: ""Eagle brand fat-free condensed milk"", quantity: 1, measure: ""can""})
+CREATE (:Ingredient {name: ""chopped nuts"", quantity: 1, measure: ""cup""})
+CREATE (:Ingredient {name: ""Cool Whip"", quantity: 1, measure: ""8 oz. container""})
+CREATE (:Tool {name: ""can""})
+CREATE (:Tool {name: ""bowl""})
+CREATE (:Tool {name: ""container""})
+CREATE (:Tool {name: ""freezer""})
+CREATE (mix:Process {name: ""Mix"", referenceText: ""Mix all ingredients""})
+CREATE (freeze:Process {name: ""Freeze"", referenceText: ""Freeze.""})
+Match (p:Process)
+Where (p.name = ""Mix"" or p.referenceText = ""Mix all ingredients"")
+SET p.duration = null
+
+Match (p:Process)
+Where (p.name = ""Freeze"" or p.referenceText = ""Freeze."")
+SET p.duration = null```cypher
+CREATE (:Condition {name: ""Mix all ingredients""})
+CREATE (:Condition {name: ""Freeze""})
+```
+Match (p:Process), (c:Condition)
+Where p.name = ""Mix"" and c.name = ""Mix all ingredients""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Freeze"" and c.name = ""Freeze""
+Merge (p)-[r:SATISFIES]->(c)Match (p:Process), (i:Ingredient)
+Where (p.name = 'Mix all ingredients' or p.referenceText = 'Mix all ingredients') and i.name = 'whole cranberries'
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = 'Mix all ingredients' or p.referenceText = 'Mix all ingredients') and i.name = 'Eagle brand fat-free condensed milk'
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = 'Mix all ingredients' or p.referenceText = 'Mix all ingredients') and i.name = 'chopped nuts'
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = 'Mix all ingredients' or p.referenceText = 'Mix all ingredients') and i.name = 'Cool Whip'
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Mix"" or p.referenceText = ""Mix all ingredients"") and t.name = ""bowl""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Freeze"" or p.referenceText = ""Freeze."") and t.name = ""freezer""
+MERGE (t)-[r:USES]->(p)Match (p1:Process), (p2:Process)
+Where (p1.name = ""Mix"" OR p1.referenceText = ""Mix all ingredients"") 
+AND (p2.name = ""Freeze"" OR p2.referenceText = ""Freeze."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)```cypher
+CREATE (finalProduct:FinalProduct {name: ""Mix all ingredients and freeze""})
+```MATCH (p:Process), (f:FinalProduct)
+WHERE (p.name = ""Mix"" or p.referenceText = ""Mix all ingredients"") and f.name = ""Mix all ingredients and freeze""
+MERGE (p)-[:CREATES]->(f)"
+"Recipe Name: Vegetarian Ribs. Ingredients: 2 cups gluten, 1/3 cup nutritional yeast, 2 tablespoons paprika, 1 tablespoon salt, 2 cups water, 1/2 cup smooth peanut butter, 1 large onion, minced, 1/2 cup olive oil, 2 cups barbeque sauce, Instructions: In a large bowl, stir together the gluten, yeast, paprika and salt. Pour in the water all at once and quickly mix with a sturdy spoon. Additional water may be necessary to moisten all of the dry gluten. Dont worry that the ball is rather solid, it is supposed to be. Pour off any excess water. If you want your ribs chewy, leave the ball just as it is. If you want it slightly less chewy, remove it from the bowl and knead for 1 to 2 minutes on a clean surface. Return it to the bowl, and coat with smooth peanut butter. Set aside. Heat the oil in a skillet over medium heat. Add onion; cook and stir until golden brown. Remove from the heat. Pour the onion and oil over the ball of gluten. Poke a few times with a chopstick, knife or even a fork, allowing the oil to soak into the ball. Let cool. When the ball is just warm enough to be manageable, use your hands to mix the oil and onions in. There will be a lot of oil that will not mix in and tiny pieces of gluten that will not stay attached. Thats okay. The oil mainly helps the gluten absorb the spice. Just mix as much as you can. Preheat the oven to 350 degrees F (175 degrees C). Break off good sized handfuls of dough and shape them into strips by pulling and twisting. You want them to be about 4 inches long and 1/2 inch thick. Dont try cutting these, or rolling them out, as that will make them behave more like bread and change the texture appreciably. Place the strips on a greased baking sheet. Bake for 40 minutes in the preheated oven. Remove from the oven and coat each piece liberally with barbeque sauce. Return to the oven for another 10 minutes.","```cypher
+CREATE (:Ingredient {name: ""gluten"", measure: ""2 cups""})
+CREATE (:Ingredient {name: ""nutritional yeast"", measure: ""1/3 cup""})
+CREATE (:Ingredient {name: ""paprika"", measure: ""2 tablespoons""})
+CREATE (:Ingredient {name: ""salt"", measure: ""1 tablespoon""})
+CREATE (:Ingredient {name: ""water"", measure: ""2 cups""})
+CREATE (:Ingredient {name: ""smooth peanut butter"", measure: ""1/2 cup""})
+CREATE (:Ingredient {name: ""onion"", measure: ""1 large, minced""})
+CREATE (:Ingredient {name: ""olive oil"", measure: ""1/2 cup""})
+CREATE (:Ingredient {name: ""barbeque sauce"", measure: ""2 cups""})
+```
+```cypher
+CREATE (:Tool {name: ""large bowl""})
+CREATE (:Tool {name: ""sturdy spoon""})
+CREATE (:Tool {name: ""skillet""})
+CREATE (:Tool {name: ""chopstick""})
+CREATE (:Tool {name: ""knife""})
+CREATE (:Tool {name: ""fork""})
+CREATE (:Tool {name: ""oven""})
+CREATE (:Tool {name: ""baking sheet""})
+```  
+                 CREATE (:Process {name: ""stir""})-[:HAS_REFERENCE_TEXT]->(:ReferenceText {text: ""In a large bowl, stir together the gluten, yeast, paprika and salt.""})
+                 CREATE (:Process {name: ""pour""})-[:HAS_REFERENCE_TEXT]->(:ReferenceText {text: ""Pour in the water all at once and quickly mix with a sturdy spoon.""})
+                 CREATE (:Process {name: ""mix""})-[:HAS_REFERENCE_TEXT]->(:ReferenceText {text: ""Pour in the water all at once and quickly mix with a sturdy spoon.""})
+                 CREATE (:Process {name: ""moisten""})-[:HAS_REFERENCE_TEXT]->(:ReferenceText {text: ""Additional water may be necessary to moisten all of the dry gluten.""})
+                 CREATE (:Process {name: ""worry""})-[:HAS_REFERENCE_TEXT]->(:ReferenceText {text: ""Dont worry that the ball is rather solid, it is supposed to be.""})
+                 CREATE (:Process {name: ""pour_off""})-[:HAS_REFERENCE_TEXT]->(:ReferenceText {text: ""Pour off any excess water.""})
+                 CREATE (p1:Process {name: ""leave the ball as it is"", referenceText: ""If you want your ribs chewy, leave the ball just as it is.""})
+                 CREATE (p2:Process {name: ""remove it from the bowl and knead for 1 to 2 minutes on a clean surface"", referenceText: ""If you want it slightly less chewy, remove it from the bowl and knead for 1 to 2 minutes on a clean surface.""})
+                 CREATE (p3:Process {name: ""coat with smooth peanut butter"", referenceText: ""Return it to the bowl, and coat with smooth peanut butter.""})
+                 CREATE (p4:Process {name: ""heat the oil in a skillet over medium heat"", referenceText: ""Set aside. Heat the oil in a skillet over medium heat.""})
+CREATE (process1:Process {name: ""Add onion"", referenceText: ""Add onion; cook and stir until golden brown.""})
+CREATE (process2:Process {name: ""Cook and stir until golden brown"", referenceText: ""Add onion; cook and stir until golden brown.""})
+CREATE (process3:Process {name: ""Remove from the heat"", referenceText: ""Remove from the heat.""})
+CREATE (process4:Process {name: ""Pour the onion and oil over the ball of gluten"", referenceText: ""Pour the onion and oil over the ball of gluten.""})
+CREATE (process5:Process {name: ""Poke a few times with a chopstick, knife or even a fork, allowing the oil to soak into the ball"", referenceText: ""Poke a few times with a chopstick, knife or even a fork, allowing the oil to soak into the ball.""})
+CREATE (process6:Process {name: ""Let cool"", referenceText: ""Let cool.""})
+CREATE (mixing:Process {name: ""Mixing"", referenceText: ""use your hands to mix the oil and onions in""})
+CREATE (absorbing:Process {name: ""Absorbing"", referenceText: ""The oil mainly helps the gluten absorb the spice""})
+                 CREATE (p1:Process {name: ""Preheat the oven"", referenceText: ""Preheat the oven to 350 degrees F (175 degrees C).""})
+                 CREATE (p2:Process {name: ""Break off good sized handfuls of dough"", referenceText: ""Break off good sized handfuls of dough and shape them into strips by pulling and twisting.""})
+                 CREATE (p3:Process {name: ""Shape dough into strips"", referenceText: ""Break off good sized handfuls of dough and shape them into strips by pulling and twisting.""})
+                 CREATE (p4:Process {name: ""Place strips on baking sheet"", referenceText: ""Place the strips on a greased baking sheet.""})
+CREATE (p1:Process {name: ""Bake"", referenceText: ""Bake for 40 minutes in the preheated oven.""})
+CREATE (p2:Process {name: ""Remove"", referenceText: ""Remove from the oven and coat each piece liberally with barbeque sauce.""})
+CREATE (p3:Process {name: ""Return"", referenceText: ""Return to the oven for another 10 minutes.""})
+Match (p:Process)
+Where (p.name = 'Preheat the oven' or p.referenceText = 'Preheat the oven to 350 degrees F (175 degrees C).')
+SET p.temperature = '350 degrees F (175 degrees C)'
+
+Match (p:Process)
+Where (p.name = 'Bake' or p.referenceText = 'Bake for 40 minutes in the preheated oven.')
+SET p.duration = '40 minutes'
+
+Match (p:Process)
+Where (p.name = 'Return' or p.referenceText = 'Return to the oven for another 10 minutes.')
+SET p.duration = '10 minutes'```cypher
+CREATE (:Condition {name: ""fry until light brown""})
+```
+Match (p:Process), (c:Condition)
+Where p.name = ""cook and stir"" and c.name = ""fry until light brown""
+Merge (p)-[r:SATISFIES]->(c)Match (p:Process), (i:Ingredient)
+Where (p.name = ""stir"" or p.referenceText = ""stir together the gluten, yeast, paprika and salt"") and i.name = ""gluten""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""pour"" or p.referenceText = ""Pour in the water all at once"") and i.name = ""water""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""mix"" or p.referenceText = ""quickly mix with a sturdy spoon"") and i.name = ""water""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""moisten"" or p.referenceText = ""moisten all of the dry gluten"") and i.name = ""water""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""pour_off"" or p.referenceText = ""Pour off any excess water"") and i.name = ""water""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""remove it from the bowl and knead for 1 to 2 minutes on a clean surface"" or p.referenceText = ""remove it from the bowl and knead for 1 to 2 minutes on a clean surface"") and i.name = ""gluten""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""coat with smooth peanut butter"" or p.referenceText = ""coat with smooth peanut butter"") and i.name = ""gluten""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""heat the oil in a skillet over medium heat"" or p.referenceText = ""Heat the oil in a skillet over medium heat"") and i.name = ""olive oil""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""add onion"" or p.referenceText = ""Add onion"") and i.name = ""onion""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""pour the onion and oil over the ball of gluten"" or p.referenceText = ""Pour the onion and oil over the ball of gluten"") and i.name = ""onion""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""mix"" or p.referenceText = ""use your hands to mix the oil and onions in"") and i.name = ""olive oil""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""absorb"" or p.referenceText = ""The oil mainly helps the gluten absorb the spice"") and i.name = ""olive oil""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""break off good sized handfuls of dough"" or p.referenceText = ""Break off good sized handfuls of dough"") and i.name = ""gluten""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""shape them into strips by pulling and twisting"" or p.referenceText = ""Break off good sized handfuls of dough and shape them into strips by pulling and twisting"") and i.name = ""gluten""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""place the strips on a greased baking sheet"" or p.referenceText = ""Place the strips on a greased baking sheet"") and i.name = ""gluten""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""bake"" or p.referenceText = ""Bake for 40 minutes in the preheated oven"") and i.name = ""gluten""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""remove from the oven and coat each piece liberally with barbeque sauce"" or p.referenceText = ""Remove from the oven and coat each piece liberally with barbeque sauce"") and i.name = ""barbeque sauce""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""return to the oven for another 10 minutes"" or p.referenceText = ""Return to the oven for another 10 minutes"") and i.name = ""gluten""
+Merge (i)-[r:PREREQ_FOR]->(p)
+Match (p:Process), (t:Tool)
+Where (p.name = ""stir"" or p.referenceText = ""stir together the gluten, yeast, paprika and salt"") and t.name = ""large bowl""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""pour"" or p.referenceText = ""Pour in the water all at once and quickly mix with a sturdy spoon."") and t.name = ""sturdy spoon""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""moisten"" or p.referenceText = ""Additional water may be necessary to moisten all of the dry gluten"") and t.name = ""water""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""pour_off"" or p.referenceText = ""Pour off any excess water"") and t.name = ""large bowl""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""heat the oil in a skillet over medium heat"" or p.referenceText = ""Set aside. Heat the oil in a skillet over medium heat."") and t.name = ""skillet""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Add onion"" or p.referenceText = ""Add onion; cook and stir until golden brown."") and t.name = ""onion""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Poke a few times with a chopstick, knife or even a fork, allowing the oil to soak into the ball"" or p.referenceText = ""Poke a few times with a chopstick, knife or even a fork, allowing the oil to soak into the ball."") and t.name in [""chopstick"", ""knife"", ""fork""]
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""place the strips on a greased baking sheet"" or p.referenceText = ""Place the strips on a greased baking sheet."") and t.name = ""baking sheet""
+MERGE (t)-[r:USES]->(p)Match (p1:Process), (p2:Process)
+Where (p1.name = ""stir"" or p1.referenceText = ""In a large bowl, stir together the gluten, yeast, paprika and salt."") and 
+(p2.name = ""pour"" or p2.referenceText = ""Pour in the water all at once and quickly mix with a sturdy spoon."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""mix"" or p1.referenceText = ""mix with a sturdy spoon."") and 
+(p2.name = ""moisten"" or p2.referenceText = ""Additional water may be necessary to moisten all of the dry gluten."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""moisten"" or p1.referenceText = ""Additional water may be necessary to moisten all of the dry gluten."") and 
+(p2.name = ""worry"" or p2.referenceText = ""Dont worry that the ball is rather solid, it is supposed to be."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""worry"" or p1.referenceText = ""Dont worry that the ball is rather solid, it is supposed to be."") and 
+(p2.name = ""pour_off"" or p2.referenceText = ""Pour off any excess water."")
+Create (p1)-[r:FOLLOWED_BY]->(p2) 
+Match (p1:Process), (p2:Process)
+Where (p1.name = 'leave the ball as it is' or p1.referenceText = 'If you want your ribs chewy, leave the ball just as it is.') 
+and (p2.name = 'remove it from the bowl and knead for 1 to 2 minutes on a clean surface' or p2.referenceText = 'If you want it slightly less chewy, remove it from the bowl and knead for 1 to 2 minutes on a clean surface.')
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = 'remove it from the bowl and knead for 1 to 2 minutes on a clean surface' or p1.referenceText = 'If you want it slightly less chewy, remove it from the bowl and knead for 1 to 2 minutes on a clean surface.') 
+and (p2.name = 'coat with smooth peanut butter' or p2.referenceText = 'Return it to the bowl, and coat with smooth peanut butter.')
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = 'coat with smooth peanut butter' or p1.referenceText = 'Return it to the bowl, and coat with smooth peanut butter.') 
+and (p2.name = 'heat the oil in a skillet over medium heat' or p2.referenceText = 'Set aside. Heat the oil in a skillet over medium heat.')
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Add onion"") and (p2.name = ""Cook and stir until golden brown"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Cook and stir until golden brown"") and (p2.name = ""Remove from the heat"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Remove from the heat"") and (p2.name = ""Pour the onion and oil over the ball of gluten"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Pour the onion and oil over the ball of gluten"") and (p2.name = ""Poke a few times with a chopstick, knife or even a fork, allowing the oil to soak into the ball"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Poke a few times with a chopstick, knife or even a fork, allowing the oil to soak into the ball"") and (p2.name = ""Let cool"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""stir"") and (p2.name = ""mix"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""mix"") and (p2.name = ""moisten"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""moisten"") and (p2.name = ""pour_off"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""pour_off"") and (p2.name = ""leave the ball as it is, If you want your ribs chewy, leave the ball just as it is."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""leave the ball as it is, If you want your ribs chewy, leave the ball just as it is."") and (p2.name = ""remove it from the bowl and knead for 1 to 2 minutes on a clean surface, If you want it slightly less chewy, remove it from the bowl and knead for 1 to 2 minutes on a clean surface."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""remove it from the bowl and knead for 1 to 2 minutes on a clean surface, If you want it slightly less chewy, remove it from the bowl and knead for 1 to 2 minutes on a clean surface."") and (p2.name = ""coat with smooth peanut butter, Return it to the bowl, and coat with smooth peanut butter."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""coat with smooth peanut butter, Return it to the bowl, and coat with smooth peanut butter."") and (p2.name = ""heat the oil in a skillet over medium heat, Set aside. Heat the oil in a skillet over medium heat."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)Match (p1:Process), (p2:Process)
+Where (p1.name = ""Preheat the oven"" or p1.referenceText = ""Preheat the oven to 350 degrees F (175 degrees C)."") 
+and (p2.name = ""Break off good sized handfuls of dough"" or p2.referenceText = ""Break off good sized handfuls of dough and shape them into strips by pulling and twisting."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Break off good sized handfuls of dough"" or p1.referenceText = ""Break off good sized handfuls of dough and shape them into strips by pulling and twisting."") 
+and (p2.name = ""Place strips on baking sheet"" or p2.referenceText = ""Place the strips on a greased baking sheet."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Preheat the oven"") and (p2.name = ""Bake"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Bake"") and (p2.name = ""Remove"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Remove"") and (p2.name = ""Return"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)```cypher
+CREATE (finalProduct:FinalProduct {name: ""Barbeque Gluten Ribs""})
+```MATCH (p:Process), (f:FinalProduct)
+WHERE p.name = ""Return to the oven for another 10 minutes.""
+AND f.name = ""Barbeque Gluten Ribs""
+MERGE (p)-[:CREATES]->(f)"
+"Recipe Name: German Creamed Spinach. Ingredients: 1 (10 ounce) bag fresh spinach, 1 medium onion, roughly chopped, 3 garlic cloves, 3 tablespoons flour, 3 tablespoons olive oil, milk or light cream, 1/2 teaspoon salt (or to taste), Instructions: Wash spinach and steam together with onion for 5 to 10 minutes. Finely chop cooked spinach and onion together with the garlic and place in a medium pot. Combine flour and oil and and heat in a small sauce pan until golden brown. Combine flour mixture with spinach stirring until evenly blended. Add milk to spinach stirring to combine with flour mixture. Bring to a boil over medium heat, then reduce heat and simmer for 30 minutes or until spinach thickens. Salt to taste. Enjoy.","
+CREATE (:Ingredient {name: ""fresh spinach"", quantity: ""1 (10 ounce) bag""})
+CREATE (:Ingredient {name: ""onion"", quantity: ""1 medium""})
+CREATE (:Ingredient {name: ""garlic cloves"", quantity: ""3""})
+CREATE (:Ingredient {name: ""flour"", quantity: ""3 tablespoons""})
+CREATE (:Ingredient {name: ""olive oil"", quantity: ""3 tablespoons""})
+CREATE (:Ingredient {name: ""milk or light cream""})
+CREATE (:Ingredient {name: ""salt"", quantity: ""1/2 teaspoon (or to taste)"")}// Create nodes for tools
+CREATE (:Tool {name: ""sauce pan""})
+CREATE (:Tool {name: ""medium pot""})
+CREATE (process1:Process {name: ""Wash"", referenceText: ""Wash spinach""})
+CREATE (process2:Process {name: ""Steam"", referenceText: ""Steam together with onion for 5 to 10 minutes""})
+CREATE (process3:Process {name: ""Finely chop"", referenceText: ""Finely chop cooked spinach and onion together with the garlic""})
+CREATE (process4:Process {name: ""Place"", referenceText: ""Place in a medium pot""})
+CREATE (process5:Process {name: ""Combine"", referenceText: ""Combine flour and oil""})
+CREATE (process6:Process {name: ""Heat"", referenceText: ""Heat in a small sauce pan until golden brown""})
+CREATE (process7:Process {name: ""Combine"", referenceText: ""Combine flour mixture with spinach stirring until evenly blended""})
+CREATE (process8:Process {name: ""Add"", referenceText: ""Add milk to spinach stirring to combine with flour mixture""})
+CREATE (:Process {name: ""Bring to a boil"", referenceText: ""Bring to a boil over medium heat""})
+CREATE (:Process {name: ""Reduce heat"", referenceText: ""reduce heat and simmer for 30 minutes or until spinach thickens""})
+CREATE (:Process {name: ""Simmer"", referenceText: ""reduce heat and simmer for 30 minutes or until spinach thickens""})
+CREATE (:Process {name: ""Salt to taste"", referenceText: ""Salt to taste""})
+Match (p:Process)
+Where (p.name = ""Steam"" or p.referenceText = ""Steam together with onion for 5 to 10 minutes"")
+SET p.duration = ""5 to 10 minutes""
+
+Match (p:Process)
+Where (p.name = ""Reduce heat"" or p.referenceText = ""reduce heat and simmer for 30 minutes or until spinach thickens"")
+SET p.duration = ""30 minutes""```cypher
+CREATE (:Condition {name: ""Wash spinach""})
+CREATE (:Condition {name: ""Steam spinach and onion for 5 to 10 minutes""})
+CREATE (:Condition {name: ""Finely chop cooked spinach, onion, and garlic""})
+CREATE (:Condition {name: ""Heat flour and oil in a saucepan until golden brown""})
+CREATE (:Condition {name: ""Combine flour mixture with spinach""})
+CREATE (:Condition {name: ""Add milk to spinach and flour mixture""})
+CREATE (:Condition {name: ""Bring to a boil over medium heat""})
+CREATE (:Condition {name: ""Reduce heat and simmer for 30 minutes or until spinach thickens""})
+CREATE (:Condition {name: ""Salt to taste""})
+```
+Match (p:Process), (c:Condition)
+Where p.name = ""Wash"" and c.name = ""Wash spinach""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Steam"" and c.name = ""Steam spinach and onion for 5 to 10 minutes""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Finely chop"" and c.name = ""Finely chop cooked spinach, onion, and garlic""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Place"" and c.name = ""Place in a medium pot""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Combine"" and c.name = ""Combine flour mixture with spinach""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Heat"" and c.name = ""Heat flour and oil in a saucepan until golden brown""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Combine"" and c.name = ""Combine flour mixture with spinach""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Add"" and c.name = ""Add milk to spinach and flour mixture""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Bring to a boil"" and c.name = ""Bring to a boil over medium heat""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Reduce heat"" and c.name = ""Reduce heat and simmer for 30 minutes or until spinach thickens""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Salt to taste"" and c.name = ""Salt to taste""
+Merge (p)-[r:SATISFIES]->(c)Match (p:Process), (i:Ingredient)
+Where (p.name = ""Wash"") and i.name = ""fresh spinach""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Steam"") and i.name = ""onion""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Finely chop"") and i.name = ""garlic cloves""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.referenceText = ""Combine flour and oil"") and i.name = ""flour""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Add"") and i.name = ""milk or light cream""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Salt to taste"") and i.name = ""salt""
+Merge (i)-[r:PREREQ_FOR]->(p)
+Match (p:Process), (t:Tool)
+Where (p.name = ""Heat"" or p.referenceText = ""Heat in a small sauce pan until golden brown"") and t.name = ""sauce pan""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Place"" or p.referenceText = ""Place in a medium pot"") and t.name = ""medium pot""
+MERGE (t)-[r:USES]->(p)Match (p1:Process), (p2:Process)
+Where (p1.name = ""Wash"" or p1.referenceText = ""Wash spinach"") and (p2.name = ""Steam"" or p2.referenceText = ""Steam together with onion for 5 to 10 minutes"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Steam"" or p1.referenceText = ""Steam together with onion for 5 to 10 minutes"") and (p2.name = ""Finely chop"" or p2.referenceText = ""Finely chop cooked spinach and onion together with the garlic"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Finely chop"" or p1.referenceText = ""Finely chop cooked spinach and onion together with the garlic"") and (p2.name = ""Place"" or p2.referenceText = ""Place in a medium pot"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Combine"" or p1.referenceText = ""Combine flour and oil"") and (p2.name = ""Heat"" or p2.referenceText = ""Heat in a small sauce pan until golden brown"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Combine"" or p1.referenceText = ""Combine flour and oil"") and (p2.name = ""Combine"" or p2.referenceText = ""Combine flour mixture with spinach stirring until evenly blended"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Combine"" or p1.referenceText = ""Combine flour mixture with spinach stirring until evenly blended"") and (p2.name = ""Add"" or p2.referenceText = ""Add milk to spinach stirring to combine with flour mixture"")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+                 Match (p1:Process), (p2:Process)
+                  Where (p1.name = 'Bring to a boil' or p1.referenceText = 'Bring to a boil over medium heat') and (p2.name = 'Reduce heat' or p2.referenceText = 'reduce heat and simmer for 30 minutes or until spinach thickens')
+                  Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                 Match (p1:Process), (p2:Process)
+                  Where (p1.name = 'Reduce heat' or p1.referenceText = 'reduce heat and simmer for 30 minutes or until spinach thickens') and (p2.name = 'Salt to taste' or p2.referenceText = 'Salt to taste')
+                  Create (p1)-[r:FOLLOWED_BY]->(p2)```cypher
+CREATE (:FinalProduct {name: ""Spinach Creamed with Onion and Garlic""})
+```MATCH (p:Process), (f:FinalProduct)
+WHERE (p.name = 'Salt to taste' or p.referenceText = 'Salt to taste') and f.name = 'Spinach Creamed with Onion and Garlic'
+MERGE (p)-[:CREATES]->(f)"
+"Recipe Name: Fruit Salad. Ingredients: cherries, black grapes, red grapes, white grapes, bananas, apples, pears, pineapple, oranges, peaches, blackberries, blueberries, strawberries, kiwi, lemon juice, frozen punch concentrate, Instructions: Wash and cut fruit into chunks. Assemble in bowl. Add lemon juice and fruit concentrate. Mix. Chill salad.","```cypher
+CREATE (:Ingredient {name: 'cherries'})
+CREATE (:Ingredient {name: 'black grapes'})
+CREATE (:Ingredient {name: 'red grapes'})
+CREATE (:Ingredient {name: 'white grapes'})
+CREATE (:Ingredient {name: 'bananas'})
+CREATE (:Ingredient {name: 'apples'})
+CREATE (:Ingredient {name: 'pears'})
+CREATE (:Ingredient {name: 'pineapple'})
+CREATE (:Ingredient {name: 'oranges'})
+CREATE (:Ingredient {name: 'peaches'})
+CREATE (:Ingredient {name: 'blackberries'})
+CREATE (:Ingredient {name: 'blueberries'})
+CREATE (:Ingredient {name: 'strawberries'})
+CREATE (:Ingredient {name: 'kiwi'})
+CREATE (:Ingredient {name: 'lemon juice'})
+CREATE (:Ingredient {name: 'frozen punch concentrate'})
+```
+MERGE (cherries:Ingredient {name: ""cherries""})
+MERGE (black_grapes:Ingredient {name: ""black grapes""})
+MERGE (red_grapes:Ingredient {name: ""red grapes""})
+MERGE (white_grapes:Ingredient {name: ""white grapes""})
+MERGE (bananas:Ingredient {name: ""bananas""})
+MERGE (apples:Ingredient {name: ""apples""})
+MERGE (pears:Ingredient {name: ""pears""})
+MERGE (pineapple:Ingredient {name: ""pineapple""})
+MERGE (oranges:Ingredient {name: ""oranges""})
+MERGE (peaches:Ingredient {name: ""peaches""})
+MERGE (blackberries:Ingredient {name: ""blackberries""})
+MERGE (blueberries:Ingredient {name: ""blueberries""})
+MERGE (strawberries:Ingredient {name: ""strawberries""})
+MERGE (kiwi:Ingredient {name: ""kiwi""})
+MERGE (lemon_juice:Ingredient {name: ""lemon juice""})
+MERGE (frozen_punch_concentrate:Ingredient {name: ""frozen punch concentrate""})
+CREATE (:Process {name: ""Wash and cut fruit into chunks"", referenceText: ""Wash and cut fruit into chunks. Assemble in bowl.""})
+CREATE (:Process {name: ""Assemble in bowl"", referenceText: ""Assemble in bowl.""})
+CREATE (:Process {name: ""Add lemon juice and fruit concentrate"", referenceText: ""Add lemon juice and fruit concentrate.""})
+CREATE (:Process {name: ""Mix"", referenceText: ""Mix.""})
+CREATE (:Process {name: ""Chill salad"", referenceText: ""Chill salad.""})
+Match (p:Process)
+Where (p.name = ""Wash and cut fruit into chunks"" or p.referenceText = ""Wash and cut fruit into chunks."")
+SET p.duration = ""Preparation""
+
+Match (p:Process)
+Where (p.name = ""Assemble in bowl"" or p.referenceText = ""Assemble in bowl."")
+SET p.duration = ""5 minutes""
+
+Match (p:Process)
+Where (p.name = ""Add lemon juice and fruit concentrate"" or p.referenceText = ""Add lemon juice and fruit concentrate."")
+SET p.temperature = ""Room temperature""
+
+Match (p:Process)
+Where (p.name = ""Mix"" or p.referenceText = ""Mix."")
+SET p.duration = ""1 minute""
+
+Match (p:Process)
+Where (p.name = ""Chill salad"" or p.referenceText = ""Chill salad."")
+SET p.temperature = ""Refrigerated""```cypher
+CREATE (:Condition {name: ""Wash fruit""})
+CREATE (:Condition {name: ""Cut fruit into chunks""})
+CREATE (:Condition {name: ""Assemble fruit in bowl""})
+CREATE (:Condition {name: ""Add lemon juice""})
+CREATE (:Condition {name: ""Add fruit concentrate""})
+CREATE (:Condition {name: ""Mix ingredients""})
+CREATE (:Condition {name: ""Chill salad""})
+```Match (p:Process), (c:Condition)
+Where p.name = ""Wash and cut fruit into chunks"" and c.name = ""Wash fruit""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Wash and cut fruit into chunks"" and c.name = ""Cut fruit into chunks""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Assemble in bowl"" and c.name = ""Assemble fruit in bowl""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Add lemon juice and fruit concentrate"" and c.name = ""Add lemon juice""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Add lemon juice and fruit concentrate"" and c.name = ""Add fruit concentrate""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Mix"" and c.name = ""Mix ingredients""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Chill salad"" and c.name = ""Chill salad""
+Merge (p)-[r:SATISFIES]->(c)
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Wash and cut fruit into chunks. Assemble in bowl."" or p.referenceText = ""Wash and cut fruit into chunks. Assemble in bowl."") and i.name = ""cherries""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Wash and cut fruit into chunks. Assemble in bowl."" or p.referenceText = ""Wash and cut fruit into chunks. Assemble in bowl."") and i.name = ""black grapes""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Wash and cut fruit into chunks. Assemble in bowl."" or p.referenceText = ""Wash and cut fruit into chunks. Assemble in bowl."") and i.name = ""red grapes""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Wash and cut fruit into chunks. Assemble in bowl."" or p.referenceText = ""Wash and cut fruit into chunks. Assemble in bowl."") and i.name = ""white grapes""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Wash and cut fruit into chunks. Assemble in bowl."" or p.referenceText = ""Wash and cut fruit into chunks. Assemble in bowl."") and i.name = ""bananas""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Wash and cut fruit into chunks. Assemble in bowl."" or p.referenceText = ""Wash and cut fruit into chunks. Assemble in bowl."") and i.name = ""apples""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Add lemon juice and fruit concentrate."" or p.referenceText = ""Add lemon juice and fruit concentrate."") and i.name = ""lemon juice""
+Merge (i)-[r:PREREQ_FOR]->(p)Match (p:Process), (t:Tool)
+Where (p.name = ""Wash and cut fruit into chunks. Assemble in bowl."") and t.name = ""bowl""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Add lemon juice and fruit concentrate"") and t.name = ""lemon juice"" 
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Add lemon juice and fruit concentrate"") and t.name = ""fruit concentrate"" 
+MERGE (t)-[r:USES]->(p) 
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Wash and cut fruit into chunks"" or p1.referenceText = ""Wash and cut fruit into chunks."") and (p2.name = ""Assemble in bowl"" or p2.referenceText = ""Assemble in bowl."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Assemble in bowl"" or p1.referenceText = ""Assemble in bowl."") and (p2.name = ""Add lemon juice and fruit concentrate"" or p2.referenceText = ""Add lemon juice and fruit concentrate."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Add lemon juice and fruit concentrate"" or p1.referenceText = ""Add lemon juice and fruit concentrate."") and (p2.name = ""Mix"" or p2.referenceText = ""Mix."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Mix"" or p1.referenceText = ""Mix."") and (p2.name = ""Chill salad"" or p2.referenceText = ""Chill salad."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+  ```cypher
+CREATE (:FinalProduct {name: ""Fruit Salad Recipe""})
+```MATCH (p:Process), (f:FinalProduct)
+WHERE (p.name = ""Chill salad"" or p.referenceText = ""Chill salad."")
+AND f.name = ""Fruit Salad Recipe""
+MERGE (p)-[:CREATES]->(f)"
+"Recipe Name: Tex-Mex Eggplant Melts. Ingredients: 4 slices from one large eggplants (1/2-inch), 2 tablespoons olive oil, 1/2 teaspoon chili powder, 4 slices red onions, 4 tomatoes, slices, 1 avocado, peeled and cut into 8 slices, 4 slices monterey jack pepper cheese, sour cream (to garnish), cilantro (to garnish), Instructions: Brush both sides of each eggplant slice with the olive oil. Place on a baking sheet. Sprinkle the top side of each slice with chili powder. Bake at 350 degrees about 30 minutes, or until tender. Remove the baking sheet from the oven; top each eggplant slice with onion, tomato, avocado and cheese. Broil 1-2 minutes or till the cheese melts and is bubbly. Garnish each serving with a dollop of sour cream and a little cilantro. Enjoy!","```cypher
+CREATE (:Ingredient {name: ""eggplants"", measure: ""slices"", quantity: 4, size: ""1/2-inch""})
+CREATE (:Ingredient {name: ""olive oil"", measure: ""tablespoons"", quantity: 2})
+CREATE (:Ingredient {name: ""chili powder"", measure: ""teaspoon"", quantity: 1/2})
+CREATE (:Ingredient {name: ""red onions"", measure: ""slices"", quantity: 4})
+CREATE (:Ingredient {name: ""tomatoes"", measure: ""slices"", quantity: 4})
+CREATE (:Ingredient {name: ""avocado"", measure: ""pieces"", quantity: 1, slices: 8})
+CREATE (:Ingredient {name: ""monterey jack pepper cheese"", measure: ""slices"", quantity: 4})
+CREATE (:Ingredient {name: ""sour cream""})
+CREATE (:Ingredient {name: ""cilantro""})
+```  
+```cypher
+CREATE (:Tool {name: ""baking sheet""})
+CREATE (:Tool {name: ""oven""})
+CREATE (:Tool {name: ""brush""})
+CREATE (:Tool {name: ""knife""})
+CREATE (:Tool {name: ""spoon""})
+CREATE (:Tool {name: ""bowl""})
+CREATE (:Tool {name: ""measuring spoon""})
+CREATE (:Tool {name: ""cutting board""})
+CREATE (:Tool {name: ""baking dish""})
+CREATE (:Tool {name: ""broiler""})
+CREATE (:Tool {name: ""grater""})
+CREATE (:Tool {name: ""blender""})
+CREATE (:Tool {name: ""serving spoon""})
+```
+CREATE (p1:Process {name: ""Brush with olive oil"", referenceText: ""Brush both sides of each eggplant slice with the olive oil.""})
+CREATE (p2:Process {name: ""Place on baking sheet"", referenceText: ""Place on a baking sheet.""})
+CREATE (p3:Process {name: ""Sprinkle with chili powder"", referenceText: ""Sprinkle the top side of each slice with chili powder.""})
+CREATE (p4:Process {name: ""Bake at 350 degrees"", referenceText: ""Bake at 350 degrees about 30 minutes, or until tender.""})
+CREATE (p5:Process {name: ""Remove from oven"", referenceText: ""Remove the baking sheet from the oven.""})
+CREATE (p6:Process {name: ""Top with onion, tomato, avocado, and cheese"", referenceText: ""Top each eggplant slice with onion, tomato, avocado and cheese.""})
+CREATE (p1:Process {name: ""Broil"", referenceText: ""Broil 1-2 minutes or till the cheese melts and is bubbly""})
+CREATE (p2:Process {name: ""Garnish"", referenceText: ""Garnish each serving with a dollop of sour cream and a little cilantro""})
+CREATE (p3:Process {name: ""Enjoy"", referenceText: ""Enjoy!""})
+Match (p:Process)
+Where p.name = ""Brush with olive oil"" or p.referenceText = ""Brush both sides of each eggplant slice with the olive oil.""
+SET p.duration = ""N/A""
+
+Match (p:Process)
+Where p.name = ""Place on baking sheet"" or p.referenceText = ""Place on a baking sheet.""
+SET p.duration = ""N/A""
+
+Match (p:Process)
+Where p.name = ""Sprinkle with chili powder"" or p.referenceText = ""Sprinkle the top side of each slice with chili powder.""
+SET p.duration = ""N/A""
+
+Match (p:Process)
+Where p.name = ""Bake at 350 degrees"" or p.referenceText = ""Bake at 350 degrees about 30 minutes, or until tender.""
+SET p.duration = ""30 minutes""
+SET p.temperature = ""350 degrees""
+
+Match (p:Process)
+Where p.name = ""Remove from oven"" or p.referenceText = ""Remove the baking sheet from the oven.""
+SET p.duration = ""N/A""
+
+Match (p:Process)
+Where p.name = ""Top with onion, tomato, avocado, and cheese"" or p.referenceText = ""Top each eggplant slice with onion, tomato, avocado and cheese.""
+SET p.duration = ""N/A""
+
+Match (p:Process)
+Where p.name = ""Broil"" or p.referenceText = ""Broil 1-2 minutes or till the cheese melts and is bubbly.""
+SET p.duration = ""1-2 minutes""
+
+Match (p:Process)
+Where p.name = ""Garnish"" or p.referenceText = ""Garnish each serving with a dollop of sour cream and a little cilantro.""
+SET p.duration = ""N/A""
+
+Match (p:Process)
+Where p.name = ""Enjoy"" or p.referenceText = ""Enjoy!""
+SET p.duration = ""N/A""```cypher
+// Create condition nodes mentioned in the recipe text with the field ""name""
+
+CREATE (:Condition {name: ""Brush both sides of each eggplant slice with the olive oil""})
+CREATE (:Condition {name: ""Sprinkle the top side of each slice with chili powder""})
+CREATE (:Condition {name: ""Bake at 350 degrees about 30 minutes, or until tender""})
+CREATE (:Condition {name: ""Top each eggplant slice with onion, tomato, avocado and cheese""})
+CREATE (:Condition {name: ""Broil 1-2 minutes or until the cheese melts and is bubbly""})
+CREATE (:Condition {name: ""Garnish each serving with a dollop of sour cream and a little cilantro""})
+```
+Match (p:Process), (c:Condition)
+Where p.name = ""Brush with olive oil"" and c.name = ""Brush both sides of each eggplant slice with the olive oil""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Sprinkle with chili powder"" and c.name = ""Sprinkle the top side of each slice with chili powder""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Bake at 350 degrees"" and c.name = ""Bake at 350 degrees about 30 minutes, or until tender""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Remove from oven"" and c.name = ""Remove the baking sheet from the oven""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Top with onion, tomato, avocado, and cheese"" and c.name = ""Top each eggplant slice with onion, tomato, avocado and cheese""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Broil"" and c.name = ""Broil 1-2 minutes or till the cheese melts and is bubbly""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Garnish"" and c.name = ""Garnish each serving with a dollop of sour cream and a little cilantro""
+Merge (p)-[r:SATISFIES]->(c)
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Brush with olive oil"" or p.referenceText = ""Brush both sides of each eggplant slice with the olive oil."") and i.name = ""olive oil""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Place on baking sheet"" or p.referenceText = ""Place on a baking sheet."") and i.name = ""baking sheet""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Sprinkle with chili powder"" or p.referenceText = ""Sprinkle the top side of each slice with chili powder."") and i.name = ""chili powder""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Bake at 350 degrees"" or p.referenceText = ""Bake at 350 degrees about 30 minutes, or until tender."") and i.name = ""eggplants""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Remove from oven"" or p.referenceText = ""Remove the baking sheet from the oven."") and i.name = ""baking sheet""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Top with onion, tomato, avocado, and cheese"" or p.referenceText = ""Top each eggplant slice with onion, tomato, avocado and cheese."") and i.name = ""red onions""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Top with onion, tomato, avocado, and cheese"" or p.referenceText = ""Top each eggplant slice with onion, tomato, avocado and cheese."") and i.name = ""tomatoes""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Top with onion, tomato, avocado, and cheese"" or p.referenceText = ""Top each eggplant slice with onion, tomato, avocado and cheese."") and i.name = ""avocado""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Top with onion, tomato, avocado, and cheese"" or p.referenceText = ""Top each eggplant slice with onion, tomato, avocado and cheese."") and i.name = ""monterey jack pepper cheese""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Garnish"" or p.referenceText = ""Garnish each serving with a dollop of sour cream and a little cilantro."") and i.name = ""sour cream""
+Merge (i)-[r:PREREQ_FOR]->(p)
+
+Match (p:Process), (i:Ingredient)
+Where (p.name = ""Garnish"" or p.referenceText = ""Garnish each serving with a dollop of sour cream and a little cilantro."") and i.name = ""cilantro""
+Merge (i)-[r:PREREQ_FOR]->(p)
+Match (p:Process), (t:Tool)
+Where (p.referenceText = ""Brush both sides of each eggplant slice with the olive oil."") and t.name = ""brush""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.referenceText = ""Place on a baking sheet."") and t.name = ""baking sheet""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.referenceText = ""Sprinkle the top side of each slice with chili powder."") and t.name = ""spoon""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.referenceText = ""Bake at 350 degrees about 30 minutes, or until tender."") and t.name = ""oven""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.referenceText = ""Remove the baking sheet from the oven."") and t.name = ""oven""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.referenceText = ""Top each eggplant slice with onion, tomato, avocado and cheese."") and t.name = ""knife""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.referenceText = ""Broil 1-2 minutes or till the cheese melts and is bubbly."") and t.name = ""broiler""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.referenceText = ""Garnish each serving with a dollop of sour cream and a little cilantro."") and t.name = ""serving spoon""
+MERGE (t)-[r:USES]->(p)Match (p1:Process), (p2:Process)
+Where (p1.name = ""Brush with olive oil"" or p1.referenceText = ""Brush both sides of each eggplant slice with the olive oil."") 
+and (p2.name = ""Place on baking sheet"" or p2.referenceText = ""Place on a baking sheet."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Sprinkle with chili powder"" or p1.referenceText = ""Sprinkle the top side of each slice with chili powder."") 
+and (p2.name = ""Bake at 350 degrees"" or p2.referenceText = ""Bake at 350 degrees about 30 minutes, or until tender."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Remove from oven"" or p1.referenceText = ""Remove the baking sheet from the oven."") 
+and (p2.name = ""Top with onion, tomato, avocado, and cheese"" or p2.referenceText = ""Top each eggplant slice with onion, tomato, avocado and cheese."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+                Match (p1:Process), (p2:Process)
+                Where (p1.name = ""Brush with olive oil"" or p1.referenceText = ""Brush both sides of each eggplant slice with the olive oil."") and (p2.name = ""Place on baking sheet"" or p2.referenceText = ""Place on a baking sheet."")
+                Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                Match (p1:Process), (p2:Process)
+                Where (p1.name = ""Sprinkle with chili powder"" or p1.referenceText = ""Sprinkle the top side of each slice with chili powder."") and (p2.name = ""Bake at 350 degrees"" or p2.referenceText = ""Bake at 350 degrees about 30 minutes, or until tender."")
+                Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                Match (p1:Process), (p2:Process)
+                Where (p1.name = ""Remove from oven"" or p1.referenceText = ""Remove the baking sheet from the oven."") and (p2.name = ""Top with onion, tomato, avocado, and cheese"" or p2.referenceText = ""Top each eggplant slice with onion, tomato, avocado and cheese."")
+                Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                Match (p1:Process), (p2:Process)
+                Where (p1.name = ""Broil"" or p1.referenceText = ""Broil 1-2 minutes or till the cheese melts and is bubbly."") and (p2.name = ""Garnish"" or p2.referenceText = ""Garnish each serving with a dollop of sour cream and a little cilantro."")
+                Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                Match (p1:Process), (p2:Process)
+                Where (p1.name = ""Garnish"" or p1.referenceText = ""Garnish each serving with a dollop of sour cream and a little cilantro."") and (p2.name = ""Enjoy"" or p2.referenceText = ""Enjoy!"")
+                Create (p1)-[r:FOLLOWED_BY]->(p2)```cypher
+CREATE (:FinalProduct {name: ""Eggplant Bake""})
+```MATCH (p:Process), (f:FinalProduct)
+WHERE (p.name = ""Enjoy"" or p.referenceText = ""Enjoy"") and f.name = ""Eggplant Bake""
+MERGE (p)-[:CREATES]->(f)"
+"Recipe Name: Poppy Seed Bread. Ingredients: 1/4 c. poppy seed, 1 c. hot water, 1 yellow cake mix, 1 pkg. instant coconut cream pudding mix, 1 c. oil, 4 eggs, Instructions: Combine poppy seed and water and let set while mixing other ingredients. Add the water mixture to cake mixture and beat for 5 minutes. Pour into 2 greased and floured bread pans. Bake at 350u00b0 for 50 to 60 minutes.","```cypher
+CREATE (:Ingredient {name: ""poppy seed"", measure: ""1/4 c.""})
+CREATE (:Ingredient {name: ""hot water"", measure: ""1 c.""})
+CREATE (:Ingredient {name: ""yellow cake mix""})
+CREATE (:Ingredient {name: ""instant coconut cream pudding mix""})
+CREATE (:Ingredient {name: ""oil"", measure: ""1 c.""})
+CREATE (:Ingredient {name: ""eggs"", measure: ""4""})
+```// Creating nodes for all tools mentioned in the recipe text
+CREATE (:Tool {name: ""mixing bowl""})
+CREATE (:Tool {name: ""mixer""})
+CREATE (:Tool {name: ""oven""})
+CREATE (:Tool {name: ""measuring cup""})
+CREATE (:Tool {name: ""bread pans""})
+CREATE (:Process {name: ""Combine"", referenceText: ""Combine poppy seed and water and let set while mixing other ingredients.""});
+CREATE (:Process {name: ""Mix"", referenceText: ""Combine poppy seed and water and let set while mixing other ingredients.""});
+CREATE (:Process {name: ""Add"", referenceText: ""Add the water mixture to cake mixture and beat for 5 minutes.""});
+CREATE (:Process {name: ""Beat"", referenceText: ""Add the water mixture to cake mixture and beat for 5 minutes.""});
+CREATE (:Process {name: ""Pour"", referenceText: ""Pour into 2 greased and floured bread pans.""});
+CREATE (:Process {name: ""Bake"", referenceText: ""Bake at 350u00b0 for 50 to 60 minutes.""});
+Match (p:Process)
+Where (p.name = 'Combine' or p.referenceText = 'Combine poppy seed and water and let set while mixing other ingredients.')
+SET p.duration = 'set while mixing other ingredients.'
+
+Match (p:Process)
+Where (p.name = 'Add' or p.referenceText = 'Add the water mixture to cake mixture and beat for 5 minutes.')
+SET p.duration = '5 minutes'
+
+Match (p:Process)
+Where (p.name = 'Pour' or p.referenceText = 'Pour into 2 greased and floured bread pans.')
+SET p.quantity = 2, p.utensils = ['greased pan', 'floured pan']
+
+Match (p:Process)
+Where (p.name = 'Bake' or p.referenceText = 'Bake at 350u00b0 for 50 to 60 minutes.')
+SET p.temperature = '350u00b0', p.duration = '50 to 60 minutes'```cypher
+CREATE (:Condition {name: ""Combine poppy seed and water and let set while mixing other ingredients""})
+CREATE (:Condition {name: ""Add the water mixture to cake mixture and beat for 5 minutes""})
+CREATE (:Condition {name: ""Pour into 2 greased and floured bread pans""})
+CREATE (:Condition {name: ""Bake at 350u00b0 for 50 to 60 minutes""})
+```
+Match (p:Process), (c:Condition)
+Where p.name = ""Combine"" and c.name = ""Combine poppy seed and water and let set while mixing other ingredients""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Add"" and c.name = ""Add the water mixture to cake mixture and beat for 5 minutes""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Pour"" and c.name = ""Pour into 2 greased and floured bread pans""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Bake"" and c.name = ""Bake at 350u00b0 for 50 to 60 minutes""
+Merge (p)-[r:SATISFIES]->(c)
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE (p.name = 'Combine' or p.referenceText = 'Combine poppy seed and water and let set while mixing other ingredients.') AND i.name = 'poppy seed'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)
+
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE (p.name = 'Mix' or p.referenceText = 'Combine poppy seed and water and let set while mixing other ingredients.') AND i.name = 'hot water'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)
+
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE (p.name = 'Add' or p.referenceText = 'Add the water mixture to cake mixture and beat for 5 minutes.') AND i.name = 'hot water'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)
+
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE (p.name = 'Add' or p.referenceText = 'Add the water mixture to cake mixture and beat for 5 minutes.') AND i.name = 'yellow cake mix'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)
+
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE (p.name = 'Beat' or p.referenceText = 'Add the water mixture to cake mixture and beat for 5 minutes.') AND i.name = 'yellow cake mix'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)
+
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE p.name = 'Pour' AND i.name = 'yellow cake mix'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)
+
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE p.name = 'Pour' AND i.name = 'oil'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)
+
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE p.name = 'Pour' AND i.name = 'eggs'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)Match (p:Process), (t:Tool)
+Where (p.name = ""Combine"" or p.referenceText = ""Combine poppy seed and water and let set while mixing other ingredients."") and t.name = ""mixing bowl""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Mix"" or p.referenceText = ""Combine poppy seed and water and let set while mixing other ingredients."") and t.name = ""mixer""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Add"" or p.referenceText = ""Add the water mixture to cake mixture and beat for 5 minutes."") and t.name = ""measuring cup""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Beat"" or p.referenceText = ""Add the water mixture to cake mixture and beat for 5 minutes."") and t.name = ""mixer""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Pour"" or p.referenceText = ""Pour into 2 greased and floured bread pans."") and t.name = ""bread pans""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Bake"" or p.referenceText = ""Bake at 350u00b0 for 50 to 60 minutes."") and t.name = ""oven""
+MERGE (t)-[r:USES]->(p) 
+                Match (p1:Process), (p2:Process)
+                Where (p1.name = 'Combine' or p1.referenceText = 'Combine poppy seed and water and let set while mixing other ingredients.') and (p2.name = 'Mix' or p2.referenceText = 'Combine poppy seed and water and let set while mixing other ingredients.')
+                Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                Match (p1:Process), (p2:Process)
+                Where (p1.name = 'Mix' or p1.referenceText = 'Combine poppy seed and water and let set while mixing other ingredients.') and (p2.name = 'Add' or p2.referenceText = 'Add the water mixture to cake mixture and beat for 5 minutes.')
+                Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                Match (p1:Process), (p2:Process)
+                Where (p1.name = 'Add' or p1.referenceText = 'Add the water mixture to cake mixture and beat for 5 minutes.') and (p2.name = 'Beat' or p2.referenceText = 'Add the water mixture to cake mixture and beat for 5 minutes.')
+                Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                Match (p1:Process), (p2:Process)
+                Where (p1.name = 'Beat' or p1.referenceText = 'Add the water mixture to cake mixture and beat for 5 minutes.') and (p2.name = 'Pour' or p2.referenceText = 'Pour into 2 greased and floured bread pans.')
+                Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+                Match (p1:Process), (p2:Process)
+                Where (p1.name = 'Pour' or p1.referenceText = 'Pour into 2 greased and floured bread pans.') and (p2.name = 'Bake' or p2.referenceText = 'Bake at 350u00b0 for 50 to 60 minutes.')
+                Create (p1)-[r:FOLLOWED_BY]->(p2)```cypher
+CREATE (p:FinalProduct {name: ""Poppy Seed Cake""})
+```MATCH (p:Process), (f:FinalProduct)
+WHERE (p.name = ""Bake"" or p.referenceText = ""Bake at 350u00b0 for 50 to 60 minutes."") and f.name = ""Poppy Seed Cake""
+MERGE (p)-[:CREATES]->(f)"
+"Recipe Name: Egg Custard Pie. Ingredients: 2 c. milk, scalded, 4 large eggs or 6 small, 1 c. sugar, 2 Tbsp. butter, pinch of salt, 1/2 tsp. nutmeg, 1 tsp. vanilla, Instructions: Mix sugar, butter, salt and nutmeg. Add milk and beaten eggs. Pour into unbaked pie shell. Bake at 425u00b0 for 7 minutes or at 325u00b0 for 20 to 25 minutes.","CREATE (:Ingredient {name: ""milk"", quantity: ""2 c."", preparation: ""scalded""})
+CREATE (:Ingredient {name: ""eggs"", quantity: ""4 large or 6 small""})
+CREATE (:Ingredient {name: ""sugar"", quantity: ""1 c.""})
+CREATE (:Ingredient {name: ""butter"", quantity: ""2 Tbsp.""})
+CREATE (:Ingredient {name: ""salt"", quantity: ""pinch""})
+CREATE (:Ingredient {name: ""nutmeg"", quantity: ""1/2 tsp.""})
+CREATE (:Ingredient {name: ""vanilla"", quantity: ""1 tsp.""})
+CREATE (:Tool {name: ""oven""})
+CREATE (:Tool {name: ""mixer""})
+CREATE (:Tool {name: ""spoon""})
+CREATE (:Process {name: ""Mix"", referenceText: ""Mix sugar, butter, salt and nutmeg.""})
+CREATE (:Process {name: ""Add"", referenceText: ""Add milk and beaten eggs.""})
+CREATE (:Process {name: ""Pour"", referenceText: ""Pour into unbaked pie shell.""})
+CREATE (:Process {name: ""Bake"", referenceText: ""Bake at 425u00b0 for 7 minutes or at 325u00b0 for 20 to 25 minutes.""})Match (p:Process)
+Where (p.name = 'Bake' or p.referenceText = 'Bake at 425u00b0 for 7 minutes or at 325u00b0 for 20 to 25 minutes.')
+SET p.duration = '7 minutes or 20 to 25 minutes',
+    p.temperature = '425u00b0 or 325u00b0'```cypher
+CREATE (:Condition {name: ""scalded""})
+CREATE (:Condition {name: ""fry until light brown""})
+CREATE (:Condition {name: ""Mix sugar, butter, salt and nutmeg""})
+CREATE (:Condition {name: ""Add milk and beaten eggs""})
+CREATE (:Condition {name: ""Pour into unbaked pie shell""})
+CREATE (:Condition {name: ""Bake at 425u00b0 for 7 minutes""})
+CREATE (:Condition {name: ""Bake at 325u00b0 for 20 to 25 minutes""})
+```
+Match (p:Process), (c:Condition)
+Where p.name = ""Mix"" and c.name = ""Mix sugar, butter, salt and nutmeg""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Add"" and c.name = ""Add milk and beaten eggs""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Pour"" and c.name = ""Pour into unbaked pie shell""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Bake"" and c.name = ""Bake at 425u00b0 for 7 minutes""
+Merge (p)-[r:SATISFIES]->(c)
+
+Match (p:Process), (c:Condition)
+Where p.name = ""Bake"" and c.name = ""Bake at 325u00b0 for 20 to 25 minutes""
+Merge (p)-[r:SATISFIES]->(c)
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE (p.name = 'Mix sugar, butter, salt and nutmeg.' OR p.referenceText = 'Mix sugar, butter, salt and nutmeg.') AND i.name = 'sugar'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)
+
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE (p.name = 'Mix sugar, butter, salt and nutmeg.' OR p.referenceText = 'Mix sugar, butter, salt and nutmeg.') AND i.name = 'butter'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)
+
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE (p.name = 'Mix sugar, butter, salt and nutmeg.' OR p.referenceText = 'Mix sugar, butter, salt and nutmeg.') AND i.name = 'salt'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)
+
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE (p.name = 'Mix sugar, butter, salt and nutmeg.' OR p.referenceText = 'Mix sugar, butter, salt and nutmeg.') AND i.name = 'nutmeg'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)
+
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE (p.name = 'Add milk and beaten eggs.' OR p.referenceText = 'Add milk and beaten eggs.') AND i.name = 'milk'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)
+
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE (p.name = 'Add milk and beaten eggs.' OR p.referenceText = 'Add milk and beaten eggs.') AND i.name = 'eggs'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)
+
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE (p.name = 'Pour into unbaked pie shell.' OR p.referenceText = 'Pour into unbaked pie shell.') AND i.name = 'unbaked pie shell'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)
+
+                 MATCH (p:Process), (i:Ingredient)
+                 WHERE (p.name = 'Bake at 425u00b0 for 7 minutes or at 325u00b0 for 20 to 25 minutes.' OR p.referenceText = 'Bake at 425u00b0 for 7 minutes or at 325u00b0 for 20 to 25 minutes.') AND i.name = 'pie shell'
+                 MERGE (i)-[r:PREREQ_FOR]->(p)Match (p:Process), (t:Tool)
+Where (p.name = ""Mix"" or p.referenceText = ""Mix sugar, butter, salt and nutmeg."") and t.name = ""mixer""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Add"" or p.referenceText = ""Add milk and beaten eggs."") and t.name = ""spoon""
+MERGE (t)-[r:USES]->(p)
+
+Match (p:Process), (t:Tool)
+Where (p.name = ""Bake"" or p.referenceText = ""Bake at 425u00b0 for 7 minutes or at 325u00b0 for 20 to 25 minutes."") and t.name = ""oven""
+MERGE (t)-[r:USES]->(p) 
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Mix"" or p1.referenceText = ""Mix sugar, butter, salt and nutmeg."")
+and (p2.name = ""Add"" or p2.referenceText = ""Add milk and beaten eggs."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Add"" or p1.referenceText = ""Add milk and beaten eggs."")
+and (p2.name = ""Pour"" or p2.referenceText = ""Pour into unbaked pie shell."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+
+Match (p1:Process), (p2:Process)
+Where (p1.name = ""Pour"" or p1.referenceText = ""Pour into unbaked pie shell."")
+and (p2.name = ""Bake"" or p2.referenceText = ""Bake at 425u00b0 for 7 minutes or at 325u00b0 for 20 to 25 minutes."")
+Create (p1)-[r:FOLLOWED_BY]->(p2)
+```cypher
+CREATE (:FinalProduct {name: ""Unbaked Pie""})
+```MATCH (p:Process), (f:FinalProduct)
+WHERE (p.name = 'Bake' or p.referenceText = 'Bake at 425u00b0 for 7 minutes or at 325u00b0 for 20 to 25 minutes.') and f.name = 'Unbaked Pie'
+MERGE (p)-[:CREATES]->(f)"
